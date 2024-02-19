@@ -15,7 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
     kreativitas: 20,
     ketelitian: 20,
     keberuntungan: 20,
-    kecemburuan: 20,
+    kecemasan: 20,
     keberanian: 20,
     ketabahan: 20,
     keegoisan: 20,

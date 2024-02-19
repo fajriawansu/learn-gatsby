@@ -2,7 +2,7 @@ export interface ObservedValue {
   kreativitas?: number,
   ketelitian?: number,
   keberuntungan?: number,
-  kecemburuan?: number,
+  kecemasan?: number,
   keberanian?: number,
   ketabahan?: number,
   keegoisan?: number,
