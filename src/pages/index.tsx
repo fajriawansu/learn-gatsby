@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { ObservedValue, QuestionItem } from "../types/type";
+import { CharacterKeys, CharacterReport, ObservedValue, QuestionItem } from "../types/type";
+import { DICT } from "../dict";
 
 const pageStyles = {
   color: "#232129",
@@ -42,11 +43,17 @@ const IndexPage: React.FC<PageProps> = () => {
     questions.forEach(v => {
 
     })
+    let data: CharacterKeys = "chance_maker";
+    CharacterReport[data]
+
+    let a: keyof CharacterKeys;
+    console.log(CharacterReport[data]);
   }
 
   return (
     <main style={pageStyles}>
       <button onClick={handleCheckPoint}>TRIGGER TEST MODE</button>
+      {DICT.q1.id}
     </main>
   )
 }
