@@ -1,24 +1,3 @@
-export interface ObservedValue {
-  kreativitas?: number,
-  ketelitian?: number,
-  keberuntungan?: number,
-  kecemasan?: number,
-  keberanian?: number,
-  ketabahan?: number,
-  keegoisan?: number,
-  kejujuran?: number
-}
-
-export interface OptionItem {
-  sentence: string
-  points: ObservedValue
-}
-
-export interface QuestionItem {
-  question: string
-  options: OptionItem[]
-}
-
 export enum CharacterReport {
   chance_maker = "Chance Maker",
   firework_launcher = "Firework Launcher",
@@ -43,4 +22,29 @@ export interface CharacterDetail {
   code: CharacterKeys
   title: CharacterReport
   description: string
+}
+
+export type CharacterPoints = Partial<Record<CharacterKeys, number>>;
+
+export enum ObservedEnum {
+  creativity = "Kreativitas",
+  thoroughness = "Ketelitian",
+  luck = "Keberuntungan",
+  anxiety = "Kecemasan",
+  courage = "Keberanian",
+  fortitude = "Ketabahan",
+  selfishness = "Keegoisan",
+  honesty = "Kejujuran"
+}
+
+export type ObservedValue = Partial<Record<keyof typeof ObservedEnum, number>>;
+export interface OptionItem {
+  sentence: string
+  personality_points: ObservedValue
+  character_points: CharacterPoints
+}
+
+export interface QuestionItem {
+  question: string
+  options: OptionItem[]
 }

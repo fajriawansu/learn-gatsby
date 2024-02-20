@@ -13,14 +13,14 @@ const pageStyles = {
 const IndexPage: React.FC<PageProps> = () => {
 
   const [observed, setObserved] = React.useState<ObservedValue>({
-    kreativitas: 20,
-    ketelitian: 20,
-    keberuntungan: 20,
-    kecemasan: 20,
-    keberanian: 20,
-    ketabahan: 20,
-    keegoisan: 20,
-    kejujuran: 20
+    creativity: 20,
+    thoroughness: 20,
+    luck: 20,
+    anxiety: 20,
+    courage: 20,
+    fortitude: 20,
+    selfishness: 20,
+    honesty: 20
   });
 
   const [questions, setQuestions] = React.useState<QuestionItem[]>([
@@ -29,10 +29,11 @@ const IndexPage: React.FC<PageProps> = () => {
       options: [
         {
           sentence: "Option 1",
-          points: {
-            keberanian: 1,
-            ketabahan: 2
-          }
+          personality_points: {
+            courage: 1,
+            thoroughness: 2
+          },
+          character_points: {}
         }
       ]
     }
