@@ -60,14 +60,14 @@ export const useGlobalStore = create<BearState>()((set) => ({
     villain_material: 0,
   },
   personalityPoints: {
-    creativity: 0,
-    thoroughness: 0,
-    luck: 0,
-    anxiety: 0,
-    courage: 0,
-    fortitude: 0,
-    selfishness: 0,
-    honesty: 0,
+    creativity: 20,
+    thoroughness: 20,
+    luck: 20,
+    anxiety: 20,
+    courage: 20,
+    fortitude: 20,
+    selfishness: 20,
+    honesty: 20,
   },
   updatePoint: (personas, chars) =>
     set((state) => ({
