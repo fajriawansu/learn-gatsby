@@ -1,4 +1,4 @@
-export enum CharacterReport {
+export enum CharacterReportEnum {
   chance_maker = "Chance Maker",
   firework_launcher = "Firework Launcher",
   heist_mastermind = "Heist Mastermind",
@@ -17,10 +17,10 @@ export enum CharacterReport {
   villain_material = "Villain Material"
 }
 
-export type CharacterKeys = keyof typeof CharacterReport;
+export type CharacterKeys = keyof typeof CharacterReportEnum;
 export interface CharacterDetail {
   code: CharacterKeys
-  title: CharacterReport
+  title: CharacterReportEnum
   description: string
 }
 

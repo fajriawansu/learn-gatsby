@@ -1,7 +1,8 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { CharacterKeys, CharacterReport, ObservedValue, QuestionItem } from "../types/type";
+import { CharacterKeys, CharacterReportEnum, ObservedValue, QuestionItem } from "../types/type";
 import { DICT } from "../dict";
+import { useGlobalStore } from "../stores/store";
 
 const pageStyles = {
   color: "#232129",
@@ -11,6 +12,8 @@ const pageStyles = {
 
 
 const IndexPage: React.FC<PageProps> = () => {
+
+  const {personalityPoints, updatePoint} = useGlobalStore();
 
   const [observed, setObserved] = React.useState<ObservedValue>({
     creativity: 20,
@@ -40,21 +43,22 @@ const IndexPage: React.FC<PageProps> = () => {
   ]);
 
   const handleCheckPoint = () => {
+    updatePoint(observed, {});
     let value: ObservedValue;
     questions.forEach(v => {
 
     })
     let data: CharacterKeys = "chance_maker";
-    CharacterReport[data]
+    CharacterReportEnum[data]
 
     let a: keyof CharacterKeys;
-    console.log(CharacterReport[data]);
+    // console.log(CharacterReportEnum[data]);
   }
 
   return (
     <main style={pageStyles}>
       <button onClick={handleCheckPoint}>TRIGGER TEST MODE</button>
-      {DICT.q1.id}
+      {personalityPoints.creativity}
     </main>
   )
 }
