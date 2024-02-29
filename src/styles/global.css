@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Mystery";
+  src: url("./Misteryzero-Regular.ttf");
+}
+
+body {
+  color: "white";
+  font-size: 14px;
+  font-family: "-apple-system, Roboto, sans-serif, serif";
+}
+
+@keyframes dip {
+  50% {opacity: 0.45}
+  100% {opacity: 0.9}
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px);
+  
+    box-shadow: 0px 0px 5px 0px white; }
+  50%  { transform: translate(0, 2px); 
+    box-shadow: 0px 0px 15px 3px white;}
+  100%   { transform: translate(0, -0px);
+    box-shadow: 0px 0px 5px 0px white;
+     }    
+}
+
+.dip-animation {
+  opacity: 0.9;
+  animation: dip 5s ease-in-out infinite;
+}
+
+.floating-animation {
+    animation: floating 3s ease-in-out infinite;
+}

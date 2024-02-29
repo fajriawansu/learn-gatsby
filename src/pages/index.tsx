@@ -1,21 +1,11 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import {
-  CharacterKeys,
-  CharacterPoints,
-  CharacterReportEnum,
-  ObservedValue,
-  QuestionItem,
-} from "../types/type";
-import { DICT } from "../dict";
+import { CharacterPoints, ObservedValue } from "../types/type";
 import { useGlobalStore } from "../stores/store";
 import { QUESTIONS_CONST } from "../constants";
-
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
+import { DICT } from "../dict";
+import ImagePreviewer from "../components/ImagePreviewer";
+import { Layout } from "../components/Layout";
 
 const IndexPage: React.FC<PageProps> = () => {
   const { personalityPoints, characterPoints, updatePoint } = useGlobalStore();
@@ -32,35 +22,10 @@ const IndexPage: React.FC<PageProps> = () => {
   };
 
   return (
-    <main style={pageStyles}>
-      <button onClick={handleCheckPoint}>TRIGGER TEST MODE</button>
-      {QUESTIONS_CONST.map((v) => (
-        <>
-          <div>Q: {v.question}</div>
-          <div>
-            {" "}
-            {v.options.map((data, idx) => (
-              <>
-                <div
-                  style={{ margin: "12px 0" }}
-                  onClick={() =>
-                    handleSubmitOption(
-                      data.personality_points,
-                      data.character_points
-                    )
-                  }
-                >
-                  {idx + 1}. {data.sentence}
-                </div>
-              </>
-            ))}
-          </div>
-        </>
-      ))}
-    </main>
+    <Layout>
+      <ImagePreviewer />
+    </Layout>
   );
 };
 
 export default IndexPage;
-
-export const Head: HeadFC = () => <title>Home Page</title>;

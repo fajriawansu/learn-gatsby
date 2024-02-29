@@ -9,11 +9,11 @@ export interface Dictionaries {
 
 const QUESTION_DICT_BANK: Dictionaries = {
   prologue: {
-    id: "Kamu, dengan keadaan setengah sadar, terbangun dalam sebuah daratan gelap tak diketahui, sendirian. Kesadaranmu pulih seiring waktu tapi kegelapan membatasi jarak pandangmu. Kau hanya melihat setitik cahaya yang mengerdip, remang, kau tidak ada pilihan selain mendekatinya. Kau berjalan penuh keraguan, dan ...",
+    id: "Kamu...,| dengan keadaan setengah sadar,| terbangun dalam sebuah daratan gelap tak diketahui,| sendirian.| Kesadaranmu pulih seiring waktu tapi kegelapan membatasi jarak pandangmu.| Kau hanya melihat setitik cahaya yang mengerdip|, remang,| kau tidak ada pilihan selain mendekatinya.| Kau berjalan penuh keraguan,| dan ...",
     en: "",
   },
   q1: {
-    id: "... cahaya tadi rupanya dari tiga lingkaran yang melayang. Seperti... gerbang pembelah ruang? Kau, entah dari mana, memiliki perasaan bahwa, kau harus masuk. Ah, tidak, tidak, kau hanya terdesak pada pilihan pergi masuk atau tenggelam dalam kegelapan yang luas. Kau memilih ...",
+    id: "... cahaya tadi | rupanya dari tiga lingkaran yang melayang.| Seperti... || gerbang pembelah ruang? |||Kau, |entah dari mana, |memiliki perasaan bahwa...|, kau harus masuk.|| Ah, tidak, tidak,||| kau hanya terdesak pada pilihan pergi masuk| atau tenggelam dalam kegelapan yang luas.| Kau memilih ...",
     en: "",
   },
   q1_opt1: {
@@ -93,7 +93,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q6: {
-    id: "Kau keluar dari lorong, bersama teman hewan dan senjatamu. Semakin jauh, cahaya semakin jelas, yang ternyata mengantarmu ke hutan penuh flora dengan warna yang aneh. Kau berjalan perlahan memerhatikan sekitar, tiba-tiba hewan yang membersamaimu gelisah. Ia kepakkan sayap-sayapnya dengan cepat, melayang di tempat, di depan sebuah pohon raksasa. Kau ... mencoba mendekati burung itu, tiba-tiba dari pecahan batang tubuh itu terbuka lah sepasang mata. Pohon itu marah, bergerak menyerangmu dengan ranting-rantingnya. Kau menghadapinya dengan ...",
+    id: "Kau keluar dari lorong, bersama teman hewan dan senjatamu. Semakin jauh, cahaya semakin jelas, yang ternyata mengantarmu ke hutan penuh flora dengan warna yang aneh. Kau berjalan perlahan memerhatikan sekitar, tiba-tiba hewan yang membersamaimu gelisah. Ia kepakkan sayap-sayapnya dengan cepat, melayang di tempat, di depan sebuah pohon raksasa. Kau ... mencoba mendekati burung itu, tiba-tiba dari pecahan batang pohon itu terbuka lah sepasang mata. Pohon itu marah, bergerak menyerangmu dengan ranting-rantingnya. Kau menghadapinya dengan ...",
     en: "",
   },
   q6_opt1: {
