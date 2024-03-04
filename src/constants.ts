@@ -3,10 +3,12 @@ import { QuestionItem } from "./types/type";
 
 export const QUESTIONS_CONST: QuestionItem[] = [
   {
+    number: 0,
     question: DICT.prologue["id"],
     options: [],
   },
   {
+    number: 1,
     question: DICT.q1["id"],
     options: [
       {
@@ -27,6 +29,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 2,
     question: DICT.q2["id"],
     options: [
       {
@@ -47,6 +50,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 3,
     question: DICT.q3["id"],
     options: [
       {
@@ -67,6 +71,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 4,
     question: DICT.q4["id"],
     options: [
       {
@@ -87,6 +92,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 5,
     question: DICT.q5["id"],
     options: [
       {
@@ -107,6 +113,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 6,
     question: DICT.q6["id"],
     options: [
       {
@@ -127,6 +134,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 7,
     question: DICT.q7["id"],
     options: [
       {
@@ -147,6 +155,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 8,
     question: DICT.q8["id"],
     options: [
       {
@@ -167,6 +176,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 9,
     question: DICT.q9["id"],
     options: [
       {
@@ -187,6 +197,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
     ],
   },
   {
+    number: 10,
     question: DICT.q10["id"],
     options: [
       {

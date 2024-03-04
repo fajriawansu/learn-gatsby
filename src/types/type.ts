@@ -14,14 +14,14 @@ export enum CharacterReportEnum {
   subway_artist = "Subway Artist",
   tomb_guard = "Guardian of The Lover's Tomb",
   twister_fate = "Twister Fate",
-  villain_material = "Villain Material"
+  villain_material = "Villain Material",
 }
 
 export type CharacterKeys = keyof typeof CharacterReportEnum;
 export interface CharacterDetail {
-  code: CharacterKeys
-  title: CharacterReportEnum
-  description: string
+  code: CharacterKeys;
+  title: CharacterReportEnum;
+  description: string;
 }
 
 export type CharacterPoints = Partial<Record<CharacterKeys, number>>;
@@ -34,17 +34,18 @@ export enum ObservedEnum {
   courage = "Keberanian",
   fortitude = "Ketabahan",
   selfishness = "Keegoisan",
-  honesty = "Kejujuran"
+  honesty = "Kejujuran",
 }
 
 export type ObservedValue = Partial<Record<keyof typeof ObservedEnum, number>>;
 export interface OptionItem {
-  sentence: string
-  personality_points: ObservedValue
-  character_points: CharacterPoints
+  sentence: string;
+  personality_points: ObservedValue;
+  character_points: CharacterPoints;
 }
 
 export interface QuestionItem {
-  question: string
-  options: OptionItem[]
+  number: number;
+  question: string;
+  options: OptionItem[];
 }

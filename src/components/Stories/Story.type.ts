@@ -1,5 +1,8 @@
-export interface StoryProps {
-  onFinish: () => void;
-}
+import { ReactNode } from "react";
+import { QuestionItem } from "../../types/type";
 
-export type StoryPhase = "narrate" | "endNarrate" | "showOptions" | "finish";
+export interface StoryComponentProps {
+  imgUrl: string;
+  imgChild?: ReactNode;
+  question: QuestionItem;
+}

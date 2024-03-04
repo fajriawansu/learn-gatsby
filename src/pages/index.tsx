@@ -1,14 +1,17 @@
-import * as React from "react";
+import React, { useState } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { CharacterPoints, ObservedValue } from "../types/type";
 import { useGlobalStore } from "../stores/store";
-import { QUESTIONS_CONST } from "../constants";
-import { DICT } from "../dict";
-import ImagePreviewer from "../components/ImagePreviewer";
 import { Layout } from "../components/Layout";
+import Prologue from "../components/Stories/Prologue";
+import StoryOne from "../components/Stories/StoryOne";
+import StoryTwo from "../components/Stories/StoryTwo";
+import StoryThree from "../components/Stories/StoryThree";
+import StoryFour from "../components/Stories/StoryFour";
 
 const IndexPage: React.FC<PageProps> = () => {
-  const { personalityPoints, characterPoints, updatePoint } = useGlobalStore();
+  const { personalityPoints, characterPoints, updatePoint, activeStoryIdx } =
+    useGlobalStore();
 
   const handleCheckPoint = () => {
     console.log({ personalityPoints, characterPoints });
@@ -23,7 +26,11 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <ImagePreviewer />
+      {activeStoryIdx === 0 && <Prologue />}
+      {activeStoryIdx === 1 && <StoryOne />}
+      {activeStoryIdx === 2 && <StoryTwo />}
+      {activeStoryIdx === 3 && <StoryThree />}
+      {activeStoryIdx === 4 && <StoryFour />}
     </Layout>
   );
 };

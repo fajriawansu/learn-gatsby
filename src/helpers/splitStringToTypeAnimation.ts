@@ -21,5 +21,5 @@ export function splitStringToTypeAnimation({
     result.push(e), result.push(400);
   });
 
-  return [...result, onFinish];
+  return [2000, ...result, onFinish];
 }

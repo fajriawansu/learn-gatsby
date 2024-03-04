@@ -37,3 +37,110 @@ body {
 .floating-animation {
     animation: floating 3s ease-in-out infinite;
 }
+
+input[type='radio'] {
+  accent-color: rgb(254 240 138);
+}
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translateX(-40px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+} 
+
+@keyframes fadeOutRight {
+  0% {
+     opacity: 1;
+     transform: translateX();
+  }
+  100% {
+     opacity: 0;
+     transform: translateX(40px);
+  }
+}
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes opacityOut {
+  0% {
+     opacity: 1;
+  }
+  100% {
+     opacity: 0;
+  }
+}
+
+.opacityOut {
+  -webkit-animation-name: opacityOut;
+  animation-name: opacityOut;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes floatingRed {
+  0% { transform: translate(0,  0px);
+  
+    box-shadow: 0px 0px 5px 0px red; }
+  50%  { transform: translate(0, 2px); 
+    box-shadow: 0px 0px 15px 3px red;}
+  100%   { transform: translate(0, -0px);
+    box-shadow: 0px 0px 5px 0px red;
+     }    
+}
+
+@keyframes floatingBlue {
+  0% { transform: translate(0,  0px);
+  
+    box-shadow: 0px 0px 5px 0px blueviolet; }
+  50%  { transform: translate(0, 2px); 
+    box-shadow: 0px 0px 15px 3px blueviolet;}
+  100%   { transform: translate(0, -0px);
+    box-shadow: 0px 0px 5px 0px blueviolet;
+     }    
+}
+
+@keyframes floatingYellow {
+  0% {
+  
+    box-shadow: 0px 0px 5px 0px yellow; }
+  50%  {
+    box-shadow: 0px 0px 15px 3px yellow;}
+  100%   {
+    box-shadow: 0px 0px 5px 0px yellow;
+     }    
+}
+
+.floatingRed {
+  animation: floatingRed 3s ease-in-out infinite;
+}
+
+.floatingBlue {
+  animation: floatingBlue 3s ease-in-out infinite;
+}
+
+.floatingYellow {
+  animation: floatingYellow 3s ease-in-out infinite;
+}

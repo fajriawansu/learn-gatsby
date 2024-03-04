@@ -7,9 +7,11 @@ import {
 } from "../types/type";
 
 interface BearState {
+  activeStoryIdx: number;
   characterPoints: Record<keyof typeof CharacterReportEnum, number>;
   personalityPoints: Record<keyof typeof ObservedEnum, number>;
   updatePoint: (persona: ObservedValue, char: CharacterPoints) => void;
+  setActiveStoryIdx: (idx: number) => void;
 }
 
 function sumPersonalities(
@@ -41,6 +43,7 @@ function sumCharacters(
 }
 
 export const useGlobalStore = create<BearState>()((set) => ({
+  activeStoryIdx: 4,
   characterPoints: {
     chance_maker: 0,
     firework_launcher: 0,
@@ -73,6 +76,10 @@ export const useGlobalStore = create<BearState>()((set) => ({
     set((state) => ({
       characterPoints: sumCharacters(state.characterPoints, chars),
       personalityPoints: sumPersonalities(state.personalityPoints, personas),
+    })),
+  setActiveStoryIdx: (idx: number) =>
+    set(() => ({
+      activeStoryIdx: idx,
     })),
 }));
 

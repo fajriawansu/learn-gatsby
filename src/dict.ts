@@ -9,7 +9,7 @@ export interface Dictionaries {
 
 const QUESTION_DICT_BANK: Dictionaries = {
   prologue: {
-    id: "Kamu...,| dengan keadaan setengah sadar,| terbangun dalam sebuah daratan gelap tak diketahui,| sendirian.| Kesadaranmu pulih seiring waktu tapi kegelapan membatasi jarak pandangmu.| Kau hanya melihat setitik cahaya yang mengerdip|, remang,| kau tidak ada pilihan selain mendekatinya.| Kau berjalan penuh keraguan,| dan ...",
+    id: "Kamu...,| dengan keadaan setengah sadar,| terbangun dalam sebuah daratan gelap tak diketahui,| sendirian.|| Kesadaranmu pulih seiring waktu tapi kegelapan membatasi jarak pandangmu.|| Kau hanya melihat setitik cahaya yang mengerdip remang,| kau tidak ada pilihan selain mendekatinya.| Kau berjalan penuh keraguan,| dan ...",
     en: "",
   },
   q1: {
@@ -29,7 +29,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q2: {
-    id: "Kau masuk, tidak ada yang bisa kau amati, kau ... lagi-lagi ... terjebak dalam kegelapan. Kau mencoba kembali, tapi sialnya, tanpa kau sadari, gerbang tadi semakin mengecil sampai tak bisa kau masuki. Sesaat ketika gerbang itu menghilang, terjatuh lah sebuah kunci dari titik cahaya terakhirnya. Di saat yang sama juga, di kanan dan kirimu, menyala satu demi satu obor-obor berapi biru. Kau mengambil kunci tadi, menelusuri jalan yang kini tampak, hingga dihadapkan pada ... tiga kotak setinggi lututmu, bersisi jeruji, bergembok yang cocok dengan kunci di tanganmu. Kau melihat telur di masing-masing kotaknya. Kau mengambil salah satu obor untuk mencoba menerangi lebih dekat tiap-tiap telur. Sampai pada akhirnya kau memutuskan untuk mengambil-bebaskan salah satunya, yang ketika kau dekatkan pada obormu...",
+    id: "Kau masuk,| tidak ada yang bisa kau amati,| kau ...|| lagi-lagi ||... terjebak dalam kegelapan.|| Kau mencoba kembali,| tapi sialnya,| tanpa kau sadari,| gerbang tadi semakin mengecil sampai tak bisa kau masuki.|| Sesaat ketika gerbang itu menghilang,| terjatuh lah sebuah kunci dari titik cahaya terakhirnya.| Di saat yang sama juga,| di kanan dan kirimu,| menyala satu demi satu obor-obor berapi merah dan biru.|| Kau mengambil kunci tadi,| menelusuri jalan yang kini tampak,| hingga dihadapkan pada ...||| tiga kotak setinggi lututmu,| bergembok yang cocok dengan kunci di tanganmu.|| Kau melihat telur di masing-masing kotaknya.|| Kau mengambil salah satu obor untuk mencoba menerangi lebih dekat tiap-tiap telur.|| Sampai pada akhirnya kau memutuskan untuk membuka salah satunya,| yang ketika kau dekatkan pada obormu...",
     en: "",
   },
   q2_opt1: {
@@ -45,7 +45,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q3: {
-    id: "Kau berjalan sambil memeluk telur tadi, sampai pada lorong yang bercabang dua. Keduanya identik, berdinding lumut, beralas tanah yang retak, beratap akar-akar pohon yang saling menyulam. Kau memilih ...",
+    id: "Kau berjalan sambil memeluk telur tadi, sampai pada lorong yang bercabang dua. Keduanya berdinding kayu, beralas tanah yang retak, beratap akar-akar pohon yang saling menyulam. Kau memilih ...",
     en: "",
   },
   q3_opt1: {
