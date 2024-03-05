@@ -61,7 +61,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q4: {
-    id: "Kau masuk ke lorong kau pilih, memegang obor sambil tetap menjaganya agar tidak mengenai akar-akar kering di atasmu. Pelan dan bersiap akan ancaman, kau dikagetkan dengan telur di tangan kananmu yang bergerak-gerak. Dan... kau berhenti sebentar, meletakannya di tanah. Telur itu melayang dengan sendirinya, memecah cangkangnya seperti suatu ledakan! Kau, yang berlindung dengan sikutmu, mendapati hewan yang tidak kau bayangkan sebelumnya, telur itu menetaskan ...",
+    id: "Kau masuk ke lorong yang kau pilih,| memegang obor sambil tetap menjaganya agar tidak mengenai akar-akar kering di atasmu.|| Pelan dan bersiap akan ancaman,| kau dikagetkan dengan telur di tangan kananmu yang bergerak-gerak.|| Dan...||| kau berhenti sebentar,| meletakannya di tanah.|| Telur itu melayang dengan sendirinya,| memecah cangkangnya seperti suatu ledakan!||| Kau,| yang berlindung dengan sikutmu,| mendapati hewan yang tidak kau bayangkan sebelumnya,|| telur itu menetaskan ...",
     en: "",
   },
   q4_opt1: {
@@ -77,7 +77,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q5: {
-    id: 'Kau sampai di ujung lorong. Sialnya, ketika kau ingin keluar, seperti ada tabir transparan yang menjadi pembatas. Kau tidak bisa menembusnya. Kau sinari dinding-dinding di sekitarmu, mencoba mencari sebuah clue yang bisa membantumu. Dan... kau menemukan tulisan kuno di salah satu dinding. <br /> "aspectu de caelo et de inferno" <br /> Dinding di sekitarmu bergetar!!...tabir di hadapanmu mengecil & memadat menjadi sebuah bola...dan kau ...menyentuhnya, dan benda itu menelan telunjukmu hingga seluruh telapak tangan kananmu, kau mendapatkan di tanganmu sebuah...',
+    id: 'Kau sampai di ujung lorong.|| Sialnya,| ketika kau ingin keluar,| seperti ada tabir transparan yang menjadi pembatas.|| Kau tidak bisa menembusnya.| Kau sinari dinding-dinding di sekitarmu,| mencoba mencari sebuah clue yang bisa membantumu.|| Dan...|| kau menemukan tulisan kuno di salah satu dinding.| \n\n"ASPECTU DE CAELO ET DE INFERNO"\n\n || Dinding di sekitarmu bergetar!!...|| tabir di hadapanmu mengecil & memadat menjadi sebuah bola...| dan kau...|| menyentuhnya,| dan benda itu menelan telunjukmu hingga seluruh telapak tangan kananmu,| kau mendapatkan di tanganmu sebuah...',
     en: "",
   },
   q5_opt1: {
@@ -93,7 +93,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q6: {
-    id: "Kau keluar dari lorong, bersama teman hewan dan senjatamu. Semakin jauh, cahaya semakin jelas, yang ternyata mengantarmu ke hutan penuh flora dengan warna yang aneh. Kau berjalan perlahan memerhatikan sekitar, tiba-tiba hewan yang membersamaimu gelisah. Ia kepakkan sayap-sayapnya dengan cepat, melayang di tempat, di depan sebuah pohon raksasa. Kau ... mencoba mendekati burung itu, tiba-tiba dari pecahan batang pohon itu terbuka lah sepasang mata. Pohon itu marah, bergerak menyerangmu dengan ranting-rantingnya. Kau menghadapinya dengan ...",
+    id: "Kau keluar dari lorong bersama teman hewan dan senjatamu.|| Semakin jauh,| cahaya semakin jelas,| yang ternyata mengantarmu ke hutan penuh batu dan pepohonan.| Kau berjalan perlahan memerhatikan sekitar,| tiba-tiba...|| hewan yang membersamaimu gelisah.| Ia kepakkan sayap-sayapnya dengan cepat,| melayang di tempat,| di depan sebuah pohon raksasa.|| Kau ...|| mencoba mendekati burung itu,| dan dari pecahan batang pohon itu muncul tangan, kaki, dan sepasang mata yang menyala.|| Pohon itu marah,| bergerak menyerangmu dengan ranting-rantingnya.|| Kau menghadapinya dengan ...",
     en: "",
   },
   q6_opt1: {
@@ -105,7 +105,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q6_opt3: {
-    id: "Mencoba membakarnya dengan obor abadi yang kau bawa sejak awal, pohon tetaplah pohon bukan?",
+    id: "Melempar obor abadi yang kau bawa sejak awal, mencoba membakarnya, pohon tetaplah pohon bukan?",
     en: "",
   },
   q7: {

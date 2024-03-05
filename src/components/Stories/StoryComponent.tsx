@@ -7,6 +7,7 @@ import { useGlobalStore } from "../../stores/store";
 export default function StoryComponent({
   imgUrl,
   imgChild,
+  imgClass,
   question,
 }: StoryComponentProps) {
   const textRef = useRef<HTMLDivElement>(null);
@@ -42,7 +43,7 @@ export default function StoryComponent({
             visible ? "fadeInLeft" : "fadeOutRight"
           }`}
         >
-          <img src={imgUrl} />
+          <img src={imgUrl} className={imgClass} />
           {imgChild}
         </div>
         <div className={`${visible ? "" : "opacityOut"}`}>
@@ -51,9 +52,19 @@ export default function StoryComponent({
               <div className="p-2 max-h-[45vh] overflow-auto">
                 <div className="rounded-md">
                   {skipAnimation ? (
-                    <>{removeTextSplitter(question.question)}</>
+                    <div
+                      style={{
+                        whiteSpace: "pre-line",
+                      }}
+                      dangerouslySetInnerHTML={{
+                        __html: removeTextSplitter(question.question),
+                      }}
+                    />
                   ) : (
                     <TypeAnimation
+                      style={{
+                        whiteSpace: "pre-line",
+                      }}
                       sequence={splitStringToTypeAnimation({
                         text: question.question,
                         splitter: "|",
@@ -82,7 +93,7 @@ export default function StoryComponent({
                 {question.options.map((v, k) => (
                   <div
                     key={`q1-${k}`}
-                    className="flex items-start gap-2"
+                    className="flex items-start gap-2 mb-2"
                     onClick={() => {
                       setCheckedIdx(k + 1);
                     }}

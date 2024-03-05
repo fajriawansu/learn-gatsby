@@ -144,3 +144,39 @@ input[type='radio'] {
 .floatingYellow {
   animation: floatingYellow 3s ease-in-out infinite;
 }
+
+.blueFilter {
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes dipRed {
+  0% {
+    box-shadow: 0px 0px 5px 0px red; }
+  50%  {
+    box-shadow: 0px 0px 15px 3px red;}
+  100%   {
+    box-shadow: 0px 0px 5px 0px red;
+     }    
+}
+
+.dipRed {
+  animation: dipRed 1s infinite;
+}
