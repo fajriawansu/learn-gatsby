@@ -7,7 +7,7 @@ export default function StoryThree() {
     <StoryComponent
       imgUrl={`../../story_3.jpg`}
       imgChild={
-        <div className="h-full w-full z-10 bg-black absolute left-0 top-0 opacity-20" />
+        <div className="h-full w-full z-10 bg-darkest absolute left-0 top-0 opacity-20" />
       }
       question={QUESTIONS_CONST[3]}
     />

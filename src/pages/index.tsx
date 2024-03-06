@@ -10,6 +10,8 @@ import StoryThree from "../components/Stories/StoryThree";
 import StoryFour from "../components/Stories/StoryFour";
 import StoryFive from "../components/Stories/StoryFive";
 import StorySix from "../components/Stories/StorySix";
+import StorySeven from "../components/Stories/StorySeven";
+import StoryEight from "../components/Stories/StoryEight";
 
 const IndexPage: React.FC<PageProps> = () => {
   const { personalityPoints, characterPoints, updatePoint, activeStoryIdx } =
@@ -35,6 +37,8 @@ const IndexPage: React.FC<PageProps> = () => {
       {activeStoryIdx === 4 && <StoryFour />}
       {activeStoryIdx === 5 && <StoryFive />}
       {activeStoryIdx === 6 && <StorySix />}
+      {activeStoryIdx === 7 && <StorySeven />}
+      {activeStoryIdx === 8 && <StoryEight />}
     </Layout>
   );
 };

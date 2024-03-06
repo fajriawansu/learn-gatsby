@@ -109,7 +109,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q7: {
-    id: "Monster pohon itu berhasil kau kalahkan, dan kemudian... pohon itu mengecil, menjadi seekor anak serigala berkulit ranting dan daun. Kau mengira kalau monster itu sebenarnya adalah serigala yang dikutuk. Kau mendekati serigala itu, dan ...",
+    id: "Monster pohon itu berhasil kau kalahkan,| dan kemudian...|| pohon itu mengecil menjadi seekor anak serigala yang terkapar lemas.|| Kau mengira kalau monster itu sebenarnya adalah serigala yang dikutuk.| Kau mendekati serigala itu,| dan ...",
     en: "",
   },
   q7_opt1: {
@@ -121,15 +121,15 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q7_opt3: {
-    id: "Kau luapkan kata-kata kasar untuk menyumpahi serigala itu, kau mengeluarkan semua kekesalanmu yang tertahan",
+    id: "Kau tinggalkan dan lanjut mencari jalan keluar",
     en: "",
   },
   q8: {
-    id: "Oh bodohnya kamu... serigala hidup berkoloni! Ketika kau mendekati serigala sekarat tadi, dari belakangnya muncul banyak pasang mata yang semakin lama semakin jelas. Dan kini kau melihat 10 serigala besar yang marah! Hewanmu mencoba menyerangnya dan kau...",
+    id: "Oh bodohnya kamu...|| serigala hidup berkoloni!| Ketika kau mendekatinya,| dari belakang serigala itu bermunculuan banyak pasang mata yang semakin lama semakin jelas.|| Dan kini kau melihat 4 serigala besar yang marah!|| Hewanmu mencoba menyerangnya||| dan kau...",
     en: "",
   },
   q8_opt1: {
-    id: "Mengajaknya ikut untuk kabur",
+    id: "Menarik hewanmu untuk ikut kabur",
     en: "",
   },
   q8_opt2: {
@@ -157,7 +157,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q10: {
-    id: 'Kau sampai diujung dengan penuh lelah, lapar, dan rasa ingin pipis. Kau tidak mendapati apa-apa di tempat ini. Kau hanya mengenali satu hal ... dan semakin yakin ... kalau ... ini .... adalah tempat yang sama waktu kamu terbangun! Persis! Sebuah daratan gelap tak diketahui dengan tiga lingkaran yang melayang. Namun kali ini berbeda, ada tulisan "exit" di pintu yang kau pilih sebelumnya. dan ternyata kali ini ada pintu toilet. Kau memilih masuk ke ...',
+    id: 'Kau sampai diujung dengan penuh lelah, lapar, dan rasa ingin pipis. Kau tidak mendapati apa-apa di tempat ini. Kau hanya mengenali satu hal ... dan semakin yakin ... kalau ... ini .... adalah tempat yang sama waktu kamu terbangun! Persis! Sebuah daratan gelap tak diketahui dengan tiga lingkaran yang melayang. Namun kali ini berbeda, ada tulisan "exit" di lingkaran yang kau pilih sebelumnya. dan ternyata kali ini ada pintu toilet. Kau memilih masuk ke ...',
     en: "",
   },
   q10_opt1: {
@@ -177,7 +177,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   epilogue: {
-    id: "Kau masuk ke ruangan baru yang kau pilih, semuanya berbeda. Kau mendengar suara nyaring yang terus berulang, mulutmu menganga menatap langit-langit, kau mendapat cahaya sedikit demi sedikit. Badanmu hangat, terutama bagian bawahmu. Lama ... lama sekali ... Tapi akhirnya kau semakin sadar, mendapati kalau suara itu adalah alarm pagimu dan kehangatan itu adalah ... kau yang mengompol. Kau ... hanya bisa menerima.",
+    id: "Kau masuk ke ruangan baru yang kau pilih, semuanya berbeda. Kau mendengar suara nyaring yang terus berulang, mulutmu menganga menatap langit-langit, kau mendapat cahaya sedikit demi sedikit. Badanmu hangat, terutama bagian bawahmu. Lama... lamaaaa sekali... Tapi akhirnya kau semakin sadar, mendapati kalau suara itu adalah alarm pagimu dan kehangatan itu adalah... kau yang mengompol. Kau... hanya bisa menerima.",
     en: "",
   },
 };

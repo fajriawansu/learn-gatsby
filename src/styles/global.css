@@ -171,7 +171,7 @@ input[type='radio'] {
   0% {
     box-shadow: 0px 0px 5px 0px red; }
   50%  {
-    box-shadow: 0px 0px 15px 3px red;}
+    box-shadow: 0px 0px 15px 10px red;}
   100%   {
     box-shadow: 0px 0px 5px 0px red;
      }    
@@ -179,4 +179,38 @@ input[type='radio'] {
 
 .dipRed {
   animation: dipRed 1s infinite;
+}
+
+@keyframes inOutLight {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 90%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.inOutLight {
+  background-color: white;
+  animation: inOutLight 5s linear;
+  opacity: 0;
+}
+
+@keyframes redFilter {
+  0% {
+    filter: sepia(0%) hue-rotate(190deg) saturate(300%);
+  }
+  50% {
+    filter: sepia(80%) hue-rotate(190deg) saturate(300%);
+  }
+  100% {
+    filter: sepia(0%) hue-rotate(190deg) saturate(300%);
+  }
+}
+
+.redFilter {
+  animation: redFilter 3s infinite;
 }
