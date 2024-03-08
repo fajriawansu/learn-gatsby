@@ -12,6 +12,9 @@ import StoryFive from "../components/Stories/StoryFive";
 import StorySix from "../components/Stories/StorySix";
 import StorySeven from "../components/Stories/StorySeven";
 import StoryEight from "../components/Stories/StoryEight";
+import StoryNine from "../components/Stories/StoryNine";
+import StoryTen from "../components/Stories/StoryTen";
+import Epilogue from "../components/Stories/Epilogue";
 
 const IndexPage: React.FC<PageProps> = () => {
   const { personalityPoints, characterPoints, updatePoint, activeStoryIdx } =
@@ -28,6 +31,8 @@ const IndexPage: React.FC<PageProps> = () => {
     updatePoint(persona, char);
   };
 
+  console.log({ activeStoryIdx });
+
   return (
     <Layout>
       {activeStoryIdx === 0 && <Prologue />}
@@ -39,6 +44,9 @@ const IndexPage: React.FC<PageProps> = () => {
       {activeStoryIdx === 6 && <StorySix />}
       {activeStoryIdx === 7 && <StorySeven />}
       {activeStoryIdx === 8 && <StoryEight />}
+      {activeStoryIdx === 9 && <StoryNine />}
+      {activeStoryIdx === 10 && <StoryTen />}
+      {activeStoryIdx === 11 && <Epilogue />}
     </Layout>
   );
 };

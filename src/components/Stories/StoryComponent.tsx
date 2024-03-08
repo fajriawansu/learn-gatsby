@@ -20,7 +20,7 @@ export default function StoryComponent({
   useEffect(() => {
     if (!visible) {
       setTimeout(() => {
-        setActiveStoryIdx(question.number);
+        setActiveStoryIdx(question.number + 1);
       }, 1000);
     }
   }, [visible]);

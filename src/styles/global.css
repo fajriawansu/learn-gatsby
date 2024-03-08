@@ -214,3 +214,36 @@ input[type='radio'] {
 .redFilter {
   animation: redFilter 3s infinite;
 }
+
+@keyframes dipRedLaser {
+  0% {
+    box-shadow: 0px 0px 1px 0px red; 
+    width: 1px;
+  }
+  50%  {
+    box-shadow: 0px 0px 4px 3px red;
+    width: 200px;
+  }
+  100%   {
+    box-shadow: 0px 0px 1px 0px red;
+    width: 400px;
+     }    
+}
+
+.dipRedLaser {
+  animation: dipRedLaser 2s infinite;
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.opacityIn {
+  opacity: 1;
+  animation: opacityIn 30s linear;
+}

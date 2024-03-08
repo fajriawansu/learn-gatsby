@@ -141,23 +141,23 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q9: {
-    id: "Sesaat sebelum kau mengambil pilihanmu, peliharanmu berubah menjadi wujud manusia burung! Senjatamu lepas dari tanganmu, terbang bersatu dengan makhluk itu! Dia ... bertempur dengan hebatnya, tapi tetap tidak bisa menandingi kekuatan kumpulan serigala itu. Lalu dia, dengan sisa-sisa tenaga dari tangan kirinya, menembakkan sebuah sinar laser merah yang melubangi dinding di belakangmu. Lalu kemudian meniupkan angin kuat dari kepakkan sayapnya, menghembuskanmu ke lubang itu. Jauh sekali kau terhempas! Sampai ke suatu pulau terbang, tak ada jalan kembali, kau hanya bisa menerima dan meneruskan perjalananmu. Di belakang, terdapat tiga jembatan dengan keunikan masing-masing. Kau memilih melewati ...",
+    id: "Sesaat sebelum kau mengambil pilihanmu,| peliharanmu berubah menjadi wujud manusia burung!| Senjatamu lepas dari tanganmu,| terbang bersatu dengan makhluk itu!| Dia ...|| bertempur dengan hebatnya.|| Lalu dia menembakkan sebuah sinar laser merah yang melubangi dinding di dekatmu.| Kemudian meniupkan angin kuat dari kepakkan sayapnya,| menghembuskanmu ke lubang itu.| Kau terhempas sampai ke tempat yang luas namun asing,|| kau hanya bisa menerima dan meneruskan perjalananmu.|| Kau memilih menelusuri ...",
     en: "",
   },
   q9_opt1: {
-    id: "Jembatan dengan latar musik, dari kejauhan memanggil-manggil namamu dengan samar",
+    id: "Jembatan yang diujungnya terdapat cahaya, tapi jauh sekali",
     en: "",
   },
   q9_opt2: {
-    id: "Jembatan berangin dari ujung, dari tiupannya tercium bau masakan rumah favoritmu",
+    id: "Perairan di bawahmu, terdapat perahu kecil dan makanan",
     en: "",
   },
   q9_opt3: {
-    id: "Jembatan gelap, saking gelapnya kau melihat setitik cahaya di ujung jembatannya yang jauh",
+    id: "Mencoba berjalan ke tempat sebelumnya, walaupun tidak tahu dari arah mana kau terhempas",
     en: "",
   },
   q10: {
-    id: 'Kau sampai diujung dengan penuh lelah, lapar, dan rasa ingin pipis. Kau tidak mendapati apa-apa di tempat ini. Kau hanya mengenali satu hal ... dan semakin yakin ... kalau ... ini .... adalah tempat yang sama waktu kamu terbangun! Persis! Sebuah daratan gelap tak diketahui dengan tiga lingkaran yang melayang. Namun kali ini berbeda, ada tulisan "exit" di lingkaran yang kau pilih sebelumnya. dan ternyata kali ini ada pintu toilet. Kau memilih masuk ke ...',
+    id: 'Kau sampai pada satu tempat yang aneh,| dengan rasa lapar dan ingin pipis.|| Kau tidak mendapati apa-apa di tempat ini.| Kau hanya mengenali satu hal ...|| dan semakin yakin ...|| kalau ...|| ini ....||| adalah tempat yang sama waktu kamu terbangun!|| Sebuah daratan gelap tak diketahui dengan tiga lingkaran yang melayang.| Namun kali ini berbeda,| ada tulisan "exit" di lingkaran yang kau pilih sebelumnya,| dan kali ini ada pintu toilet.|| Kau memilih masuk ke ...',
     en: "",
   },
   q10_opt1: {
@@ -177,7 +177,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   epilogue: {
-    id: "Kau masuk ke ruangan baru yang kau pilih, semuanya berbeda. Kau mendengar suara nyaring yang terus berulang, mulutmu menganga menatap langit-langit, kau mendapat cahaya sedikit demi sedikit. Badanmu hangat, terutama bagian bawahmu. Lama... lamaaaa sekali... Tapi akhirnya kau semakin sadar, mendapati kalau suara itu adalah alarm pagimu dan kehangatan itu adalah... kau yang mengompol. Kau... hanya bisa menerima.",
+    id: "Kau masuk ke ruangan baru yang kau pilih,| semuanya berbeda.|| Kau mendengar suara nyaring yang terus berulang,| mulutmu menganga menatap langit-langit,| kau mendapat cahaya sedikit demi sedikit.|| Badanmu hangat,| terutama bagian bawahmu.|| Lama...|| lamaaaa sekali...||| Tapi akhirnya kau semakin sadar,| mendapati kalau suara itu adalah alarm pagimu dan kehangatan itu adalah...|| kau yang mengompol.|| Kau...||| hanya bisa menerima.",
     en: "",
   },
 };
