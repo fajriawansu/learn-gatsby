@@ -6,12 +6,12 @@ export default function StoryFive() {
   const [isShaking, setIsShaking] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsShaking(true), 23000);
+    setTimeout(() => setIsShaking(true), 15000);
   }, []);
 
   return (
     <StoryComponent
-      imgUrl={`../../story_5.jpg`}
+      imgUrl={`story_5.jpg`}
       imgClass={`blueFilter ${isShaking ? "shake" : ""}`}
       imgChild={
         <>

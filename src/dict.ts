@@ -1,3 +1,5 @@
+import { CharacterReportEnum, ObservedEnum } from "./types/type";
+
 export interface DictionaryItem {
   id: string;
   en: string;
@@ -45,7 +47,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q3: {
-    id: "Kau berjalan sambil memeluk telur tadi, sampai pada lorong yang bercabang dua. Keduanya berdinding kayu, beralas tanah yang retak, beratap akar-akar pohon yang saling menyulam. Kau memilih ...",
+    id: "Kau berjalan sambil memeluk telur tadi,| sampai pada lorong yang bercabang dua.|| Keduanya berdinding kayu,| beralas tanah yang retak,| beratap akar-akar pohon yang saling menyulam.|| Kau memilih ...",
     en: "",
   },
   q3_opt1: {
@@ -182,6 +184,110 @@ const QUESTION_DICT_BANK: Dictionaries = {
   },
 };
 
+const OBSERVED_VALUE_BANK: Dictionaries = {
+  [ObservedEnum.creativity]: {
+    id: "Kreativitas",
+    en: "Creativity"
+  },
+  [ObservedEnum.charisma]: {
+    id: "Karisma",
+    en: "Charisma"
+  },
+  [ObservedEnum.luck]: {
+    id: "Keberuntungan",
+    en: "Luck"
+  },
+  [ObservedEnum.anxiety]: {
+    id: "Kecemasan",
+    en: "Anxiety"
+  },
+  [ObservedEnum.courage]: {
+    id: "Keberanian",
+    en: "Courage"
+  },
+  [ObservedEnum.fortitude]: {
+    id: "Ketabahan",
+    en: "Anxiety"
+  },
+  [ObservedEnum.selfishness]: {
+    id: "Keegoisan",
+    en: "Selfishness"
+  },
+  [ObservedEnum.honesty]: {
+    id: "Kejujuran",
+    en: "Honesty"
+  }
+}
+
+const CHARACTER_RESULT_BANK: Dictionaries = {
+  [CharacterReportEnum.chance_maker]: {
+    id: "Pembuat Kesempatan",
+    en: "Chance Maker"
+  },
+  [CharacterReportEnum.firework_launcher]: {
+    id: "Pelontar Bunga Api",
+    en: "Firework Launcher"
+  },
+  [CharacterReportEnum.heist_mastermind]: {
+    id: "Dalang Perampokan",
+    en: "Heist Mastermind"
+  },
+  [CharacterReportEnum.hero_poser]: {
+    id: "Penggaya Jagoan",
+    en: "Hero Poser"
+  },
+  [CharacterReportEnum.janken_master]: {
+    id: "Si Jago Suit",
+    en: "Janken Master"
+  },
+  [CharacterReportEnum.masochistic_dreamer]: {
+    id: "Pemimpi Masokis",
+    en: "Masochistic Dreamer"
+  },
+  [CharacterReportEnum.people_champion]: {
+    id: "Jawara Masyarakat",
+    en: "People Champion"
+  },
+  [CharacterReportEnum.pirate_crew]: {
+    id: "Kru Bajak Laut",
+    en: "Pirate Crew"
+  },
+  [CharacterReportEnum.reader_in_the_corner]: {
+    id: "Pembaca yang Duduk di Sudut",
+    en: "Reader in the Corner"
+  },
+  [CharacterReportEnum.sad_swallow]: {
+    id: "Penelan Kesedihan",
+    en: "Sad Swallow"
+  },
+  [CharacterReportEnum.shadow_witch]: {
+    id: "Penyihir Bayangan",
+    en: "Shadow Witch"
+  },
+  [CharacterReportEnum.step_faker]: {
+    id: "Pemalsu Langkah",
+    en: "Step Faker"
+  },
+  [CharacterReportEnum.subway_artist]: {
+    id: "Seniman Gorong-gorong",
+    en: "Subway Artist"
+  },
+  [CharacterReportEnum.tomb_guard]: {
+    id: "Penjaga Makam Kekasih",
+    en: "Guardian of The Lover's Tomb"
+  },
+  [CharacterReportEnum.twister_fate]: {
+    id: "Pemutar Takdir",
+    en: "Twister Fate"
+  },
+  [CharacterReportEnum.villain_material]: {
+    id: "Bakal Kriminal",
+    en: "villain Material"
+  },
+}
+
 export const DICT: Dictionaries = {
   ...QUESTION_DICT_BANK,
+  ...OBSERVED_VALUE_BANK,
+  ...CHARACTER_RESULT_BANK
 };

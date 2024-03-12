@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { CharacterPoints, ObservedValue } from "../types/type";
+import {
+  CharacterPoints,
+  CharacterReportEnum,
+  ObservedValue,
+} from "../types/type";
 import { useGlobalStore } from "../stores/store";
 import { Layout } from "../components/Layout";
 import Prologue from "../components/Stories/Prologue";
@@ -15,6 +19,7 @@ import StoryEight from "../components/Stories/StoryEight";
 import StoryNine from "../components/Stories/StoryNine";
 import StoryTen from "../components/Stories/StoryTen";
 import Epilogue from "../components/Stories/Epilogue";
+import TestResult from "../components/TestResult";
 
 const IndexPage: React.FC<PageProps> = () => {
   const { personalityPoints, characterPoints, updatePoint, activeStoryIdx } =
@@ -34,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
   console.log({ activeStoryIdx });
 
   return (
-    <Layout>
+    <Layout noPadding={activeStoryIdx > 11}>
       {activeStoryIdx === 0 && <Prologue />}
       {activeStoryIdx === 1 && <StoryOne />}
       {activeStoryIdx === 2 && <StoryTwo />}
@@ -47,6 +52,12 @@ const IndexPage: React.FC<PageProps> = () => {
       {activeStoryIdx === 9 && <StoryNine />}
       {activeStoryIdx === 10 && <StoryTen />}
       {activeStoryIdx === 11 && <Epilogue />}
+      {activeStoryIdx > 11 && (
+        <TestResult
+          char={CharacterReportEnum.reader_in_the_corner}
+          gender="boy"
+        />
+      )}
     </Layout>
   );
 };

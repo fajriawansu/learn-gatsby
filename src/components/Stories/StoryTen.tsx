@@ -5,7 +5,7 @@ import StoryComponent from "./StoryComponent";
 export default function StoryTen() {
   return (
     <StoryComponent
-      imgUrl={`../../story_1.jpg`}
+      imgUrl={`story_1.jpg`}
       imgChild={
         <div>
           <div className="flex gap-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-4 dip-animation">

@@ -70,7 +70,7 @@ export default function StoryComponent({
                         splitter: "|",
                         onFinish: () => setSkipAnimation(true),
                       })}
-                      speed={60}
+                      speed={80}
                     />
                   )}
                 </div>

@@ -10,32 +10,35 @@ export default function StoryNine() {
 
   useEffect(() => {
     setTimeout(() => setShow(true), 500);
-    setTimeout(() => setIsShaking(true), 17000);
-    setTimeout(() => setIsShaking(false), 22000);
-    setTimeout(() => setChangePic(true), 20000);
-  }, [])
+    setTimeout(() => setIsShaking(true), 15000);
+    setTimeout(() => setIsShaking(false), 20000);
+    setTimeout(() => setChangePic(true), 18000);
+  }, []);
   return (
     <StoryComponent
-      imgUrl={changePic ? `../../story_9_2.jpg` : `../../story_9.jpg`}
+      imgUrl={changePic ? `story_9_2.jpg` : `story_9.jpg`}
+      imgClass={isShaking ? "shake" : ""}
       question={QUESTIONS_CONST[9]}
       imgChild={
-          <div ref={divRef}
+        <div
+          ref={divRef}
           className={`absolute z-20 left-0 top-0 w-full h-full ${
             changePic ? "inOutLight" : ""
           }`}
           style={{ animationDelay: "-2s" }}
-          >
-            {show && <div className={`absolute right-64 bg-red-400 ${!changePic && "dipRedLaser"}`}
-            style={{
-              right: `${
-                (214 * (divRef.current?.offsetWidth ?? 1)) / 343
-              }px`,
-              top: `${
-                (95 * (divRef.current?.offsetWidth ?? 1)) / 343
-              }px`
-            }}
-            />}
-          </div>
+        >
+          {show && (
+            <div
+              className={`absolute right-64 bg-red-400 ${
+                !changePic && "dipRedLaser"
+              }`}
+              style={{
+                right: `${(214 * (divRef.current?.offsetWidth ?? 1)) / 343}px`,
+                top: `${(95 * (divRef.current?.offsetWidth ?? 1)) / 343}px`,
+              }}
+            />
+          )}
+        </div>
       }
     />
   );

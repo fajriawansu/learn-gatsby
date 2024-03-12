@@ -34,7 +34,7 @@ export default function Epilogue() {
               splitter: "|",
               onFinish: () => setShowNext(true),
             })}
-            speed={50}
+            speed={70}
           />
         </div>
         {showNext && (

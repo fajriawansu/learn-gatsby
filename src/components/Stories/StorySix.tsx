@@ -8,14 +8,14 @@ export default function StorySix() {
   const [changePic, setChangePic] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsShaking(true), 15000);
-    setTimeout(() => setIsShaking(false), 21000);
-    setTimeout(() => setChangePic(true), 18000);
+    setTimeout(() => setIsShaking(true), 11000);
+    setTimeout(() => setIsShaking(false), 17000);
+    setTimeout(() => setChangePic(true), 14000);
   }, []);
 
   return (
     <StoryComponent
-      imgUrl={changePic ? `../../story_6.jpg` : `../../story_6_pre.jpg`}
+      imgUrl={changePic ? `story_6.jpg` : `story_6_pre.jpg`}
       imgClass={isShaking ? "shake" : ""}
       imgChild={
         <div ref={divRef}>

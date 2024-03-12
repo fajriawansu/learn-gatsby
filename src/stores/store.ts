@@ -43,7 +43,7 @@ function sumCharacters(
 }
 
 export const useGlobalStore = create<BearState>()((set) => ({
-  activeStoryIdx: 11,
+  activeStoryIdx: 9,
   characterPoints: {
     chance_maker: 0,
     firework_launcher: 0,
@@ -64,7 +64,7 @@ export const useGlobalStore = create<BearState>()((set) => ({
   },
   personalityPoints: {
     creativity: 20,
-    thoroughness: 20,
+    charisma: 20,
     luck: 20,
     anxiety: 20,
     courage: 20,

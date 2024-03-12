@@ -23,7 +23,7 @@ export default function Prologue() {
         }`}
       >
         <div className="relative w-full h-full">
-          <img src={`../../story_0.jpg`} />
+          <img src={`story_0.jpg`} />
           <div className="w-full h-full absolute z-10 bg-darkest left-0 top-0 opacity-50" />
           <div className="absolute z-20 w-1 h-1 rounded-full bg-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-8 floating-animation" />
         </div>
@@ -36,7 +36,7 @@ export default function Prologue() {
               splitter: "|",
               onFinish: () => setShowNext(true),
             })}
-            speed={50}
+            speed={70}
           />
         </div>
         {showNext && (

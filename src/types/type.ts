@@ -1,20 +1,20 @@
 export enum CharacterReportEnum {
-  chance_maker = "Chance Maker",
-  firework_launcher = "Firework Launcher",
-  heist_mastermind = "Heist Mastermind",
-  hero_poser = "Hero Poser",
-  janken_master = "Janken Master",
-  masochistic_dreamer = "Masochistic Dreamer",
-  people_champion = "People Champion",
-  pirate_crew = "Pirate Crew",
-  reader_in_the_corner = "Reader in The Corner",
-  sad_swallow = "Sad Swallow",
-  shadow_witch = "Shadow Witch",
-  step_faker = "Step Faker",
-  subway_artist = "Subway Artist",
-  tomb_guard = "Guardian of The Lover's Tomb",
-  twister_fate = "Twister Fate",
-  villain_material = "Villain Material",
+  chance_maker = "chance_maker",
+  firework_launcher = "firework_launcher",
+  heist_mastermind = "heist_mastermind",
+  hero_poser = "hero_poser",
+  janken_master = "janken_master",
+  masochistic_dreamer = "masochistic_dreamer",
+  people_champion = "people_champion",
+  pirate_crew = "pirate_crew",
+  reader_in_the_corner = "reader_in_the_corner",
+  sad_swallow = "sad_swallow",
+  shadow_witch = "shadow_witch",
+  step_faker = "step_faker",
+  subway_artist = "subway_artist",
+  tomb_guard = "tomb_guard",
+  twister_fate = "twister_fate",
+  villain_material = "villain_material",
 }
 
 export type CharacterKeys = keyof typeof CharacterReportEnum;
@@ -27,14 +27,14 @@ export interface CharacterDetail {
 export type CharacterPoints = Partial<Record<CharacterKeys, number>>;
 
 export enum ObservedEnum {
-  creativity = "Kreativitas",
-  thoroughness = "Ketelitian",
-  luck = "Keberuntungan",
-  anxiety = "Kecemasan",
-  courage = "Keberanian",
-  fortitude = "Ketabahan",
-  selfishness = "Keegoisan",
-  honesty = "Kejujuran",
+  creativity = "creativity",
+  charisma = "charisma",
+  luck = "luck",
+  anxiety = "anxiety",
+  courage = "courage",
+  fortitude = "fortitude",
+  selfishness = "selfishness",
+  honesty = "honesty",
 }
 
 export type ObservedValue = Partial<Record<keyof typeof ObservedEnum, number>>;
