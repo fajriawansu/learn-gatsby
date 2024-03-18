@@ -70,7 +70,7 @@ export const useGlobalStore = create<BearState>()((set) => ({
     courage: 20,
     fortitude: 20,
     selfishness: 20,
-    honesty: 20,
+    curiosity: 20,
   },
   updatePoint: (personas, chars) =>
     set((state) => ({

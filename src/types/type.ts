@@ -15,6 +15,8 @@ export enum CharacterReportEnum {
   tomb_guard = "tomb_guard",
   twister_fate = "twister_fate",
   villain_material = "villain_material",
+  all_rounder = "all_rounder",
+  fair_tricker = "fair_tricker"
 }
 
 export type CharacterKeys = keyof typeof CharacterReportEnum;
@@ -34,7 +36,7 @@ export enum ObservedEnum {
   courage = "courage",
   fortitude = "fortitude",
   selfishness = "selfishness",
-  honesty = "honesty",
+  curiosity = "curiosity",
 }
 
 export type ObservedValue = Partial<Record<keyof typeof ObservedEnum, number>>;

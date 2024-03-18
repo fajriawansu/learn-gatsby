@@ -39,11 +39,11 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q2_opt2: {
-    id: "telur itu bergerak, walau perlahan, kau masih bisa melihatnya",
+    id: "telur itu bersinar sangat silau, kau menyukai cahayanya",
     en: "",
   },
   q2_opt3: {
-    id: "terdapat retakan kecil di telur itu, mengeluarkan bau bangkai dari retakannya",
+    id: "terdapat retakan kecil di telur itu, dan itu semakin luas, kau membiarkan ia menetas dengan sendirinya",
     en: "",
   },
   q3: {
@@ -139,7 +139,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q8_opt3: {
-    id: "Ikut menghadapinya walau ini pilihan bodoh",
+    id: "Ikut menghadapinya walau ini pilihan bodoh dan kamu akan terluka hebat",
     en: "",
   },
   q9: {
@@ -151,11 +151,11 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q9_opt2: {
-    id: "Perairan di bawahmu, terdapat perahu kecil dan makanan",
+    id: "Perairan di bawahmu, terdapat perahu rusak tapi masih bisa kau perbaiki",
     en: "",
   },
   q9_opt3: {
-    id: "Mencoba berjalan ke tempat sebelumnya, walaupun tidak tahu dari arah mana kau terhempas",
+    id: "Keduanya sama saja, kau memilih jalan yang terdapat hembusan angin paling sejuk",
     en: "",
   },
   q10: {
@@ -213,9 +213,9 @@ const OBSERVED_VALUE_BANK: Dictionaries = {
     id: "Keegoisan",
     en: "Selfishness"
   },
-  [ObservedEnum.honesty]: {
-    id: "Kejujuran",
-    en: "Honesty"
+  [ObservedEnum.curiosity]: {
+    id: "Keingintahuan",
+    en: "Curiosity"
   }
 }
 

@@ -1,0 +1,83 @@
+10 3 = 31
+8 4
+16 2
+
+
+>> luck C 33 62 93 (others)
+chance_maker CM 62 others
+janken_master JM 33 93
+
+>> creativity A 13 53 92 (toilet)
+heist_mastermind HM
+subway_artist SA 13 53 92 (toilet)
+=> if creativity + high charisma/courage = heist mastermind
+
+>> charisma B 22 41 72
+hero_poser HP 22 41 72
+shadow_witch SW
+=> if charisma + high selfishness/42 = shadow witch
+
+>> anxiety D 43 52 61
+sad_swallow SS 43 72
+step_faker SF 52 61
+
+>> courage E 11 42 51 83
+pirate_crew PCR 11 51
+masochistic_dreamer MD 42 83
+
+>> fortitude F 23 63 81 (exit)
+firework_launcher FL 23 63
+tomb_guard TG 81 exit
+=> if 2 fortitude + 72/high charisma = tomb guard
+
+>> selfishness G 12 32 73 82
+people_champion PC 12 73
+villain_material VM 32 82 +71 +61
+
+>> curiosity H 21 31 71 91
+reader_in_the_corner 21 +93 +23 RC
+twister_fate 31 91 71 TF
+=> if 21 + 1 curiosity + high charisma = reader corner
+
+all_rounder = max 2 points at 3+ observed things
+fair_tricker = else all condition
+
+traits
+11 = nature person
+12 = room person
+13 = home person
+
+21 = visual oriented
+22 = self center
+23 = patient
+
+31 = hope
+32 = fast thinker
+33 = let it be
+
+41 = majestic
+42 = self control
+43 = rule oriented
+
+51 = less but enough
+52 = spread all oportunity
+53 = looking for something new
+
+61 = sacrifice stranger
+62 = trying new stuff
+63 = belief with your master
+
+71 = danger is danger
+72 = danger can be healed
+73 = danger can be abandoned
+
+81 = cheering your friends
+82 = me first
+83 = dive together
+
+91 = search opportunity
+92 = build opportunity
+93 = nature guider
+
+
+
