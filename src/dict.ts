@@ -253,7 +253,7 @@ const CHARACTER_RESULT_BANK: Dictionaries = {
     en: "Pirate Crew"
   },
   [CharacterReportEnum.reader_in_the_corner]: {
-    id: "Pembaca yang Duduk di Sudut",
+    id: "Pembaca di Sudut",
     en: "Reader in the Corner"
   },
   [CharacterReportEnum.sad_swallow]: {
@@ -284,10 +284,130 @@ const CHARACTER_RESULT_BANK: Dictionaries = {
     id: "Bakal Kriminal",
     en: "villain Material"
   },
+  [CharacterReportEnum.all_rounder]: {
+    id: "Si Serba Bisa",
+    en: "All Rounder"
+  },
+  [CharacterReportEnum.fair_tricker]: {
+    id: "Pencari Celah",
+    en: "Fair Tricker"
+  }
+}
+
+const TRAIT_BANK: Dictionaries = {
+  trait_11: {
+    id: "si paling jelajah",
+    en: "explorer"
+  },
+  trait_12: {
+    id: "si paling percaya",
+    en: "believer"
+  },
+  trait_13: {
+    id: "si paling ngide",
+    en: ""
+  },
+  trait_21: {
+    id: "orientasi visual",
+    en: "visual oriented"
+  },
+  trait_22: {
+    id: "pusat atensi",
+    en: "self center"
+  },
+  trait_23: {
+    id: "bisa menunggu",
+    en: "patient"
+  },
+  trait_31: {
+    id: "penuh harapan",
+    en: "filled with hope"
+  },
+  trait_32: {
+    id: "pemikir instan",
+    en: "fast thinker"
+  },
+  trait_33: {
+    id: "biar begitu adanya",
+    en: "let it be"
+  },
+  trait_41: {
+    id: "megah",
+    en: "majestic"
+  },
+  trait_42: {
+    id: "santai",
+    en: "chill"
+  },
+  trait_43: {
+    id: "terpicu",
+    en: "triggered"
+  },
+  trait_51: {
+    id: "satu tapi menjanjikan",
+    en: "one but promising"
+  },
+  trait_52: {
+    id: "manfaatkan semua peluang",
+    en: "take all opportunities"
+  },
+  trait_53: {
+    id: "selalu mencari yang baru",
+    en: "always looking something new"
+  },
+  trait_61: {
+    id: "korbankan yang tidak perlu",
+    en: "sacrifice unimportant things"
+  },
+  trait_62: {
+    id: "mencoba hal baru atau perbaiki",
+    en: "trying new stuff or fix it"
+  },
+  trait_63: {
+    id: "percaya dengan apa yang dikuasai",
+    en: "believe in what you are good at"
+  },
+  trait_71: {
+    id: "bahaya harus dimusnahkan",
+    en: "danger must be killed"
+  },
+  trait_72: {
+    id: "bahaya bisa dinetralkan",
+    en: "danger can be cured"
+  },
+  trait_73: {
+    id: "bahaya bisa dihindari",
+    en: "danger can be avoided"
+  },
+  trait_81: {
+    id: "kita lari bersama",
+    en: "we run together"
+  },
+  trait_82: {
+    id: "kita selesaikan sendiri-sendiri",
+    en: "we solve ourselves"
+  },
+  trait_83: {
+    id: "kita hadapi bersama",
+    en: "we face together"
+  },
+  trait_91: {
+    id: "saya menikmati alam",
+    en: "nature enjoyer"
+  },
+  trait_92: {
+    id: "saya manfaatkan alam",
+    en: "nature user"
+  },
+  trait_93: {
+    id: "saya mengamati alam",
+    en: "nature observer"
+  },
 }
 
 export const DICT: Dictionaries = {
   ...QUESTION_DICT_BANK,
   ...OBSERVED_VALUE_BANK,
-  ...CHARACTER_RESULT_BANK
+  ...CHARACTER_RESULT_BANK,
+  ...TRAIT_BANK
 };

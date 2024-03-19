@@ -43,7 +43,7 @@ export type ObservedValue = Partial<Record<keyof typeof ObservedEnum, number>>;
 export interface OptionItem {
   sentence: string;
   personality_points: ObservedValue;
-  character_points: CharacterPoints;
+  trait: string
 }
 
 export interface QuestionItem {
