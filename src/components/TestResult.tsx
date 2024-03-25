@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import ParallelogramStat from "./ParallelogramStat";
 import { CharacterReportEnum, ObservedEnum } from "../types/type";
 import { DICT } from "../dict";
+import Chip from "./Chip";
+import { useGlobalStore } from "../stores/store";
 
 interface TestResultProps {
   char: CharacterReportEnum;
@@ -10,6 +12,8 @@ interface TestResultProps {
 
 export default function TestResult({ char, gender }: TestResultProps) {
   const [glitch, setGlitch] = useState(false);
+
+  const { answersLog } = useGlobalStore();
 
   useEffect(() => {
     setTimeout(() => {
@@ -31,7 +35,7 @@ export default function TestResult({ char, gender }: TestResultProps) {
           {DICT[CharacterReportEnum[char]].en.toUpperCase()}
         </div>
       </div>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 justify-around items-center">
         <div className={`testResult ${glitch && "glitchPlease"}`}>
           <div className="imgWrap">
             <img className="red" src={`16_${char}_${gender}.jpg`} />
@@ -40,10 +44,19 @@ export default function TestResult({ char, gender }: TestResultProps) {
           </div>
         </div>
 
-        <div className="pr-4 font-sans flex flex-col gap-[3px]">
+        <div className="pr-4 font-mono flex flex-col gap-[3px]">
           {Object.values(ObservedEnum).map((v, k) => (
             <ParallelogramStat label={DICT[v].en} level={4} />
           ))}
+        </div>
+      </div>
+      <div className="p-4 flex items-center font-mono">
+        &ldquo;{DICT[`desc_${CharacterReportEnum[char]}`].en}.&rdquo;
+      </div>
+      <div className="p-4">
+        <div className="text-2xl">Traits:</div>
+        <div className="flex font-mono">
+          <Chip label={DICT.trait_11.id} />
         </div>
       </div>
     </div>

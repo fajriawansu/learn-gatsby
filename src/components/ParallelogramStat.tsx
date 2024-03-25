@@ -12,7 +12,7 @@ function Blok({ className }: { className: string }) {
 export default function ParallelogramStat({ label, level }: Props) {
   return (
     <div className="flex gap-1 text-sm items-center">
-      <div className="w-20">{label}</div>
+      <div className="w-[82px]">{label}</div>
       <div className="flex gap-1 ml-1">
         {Array.from(Array(5)).map((v, k) => (
           <Blok
