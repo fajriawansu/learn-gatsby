@@ -16,7 +16,7 @@ export enum CharacterReportEnum {
   twister_fate = "twister_fate",
   villain_material = "villain_material",
   all_rounder = "all_rounder",
-  fair_tricker = "fair_tricker"
+  fair_tricker = "fair_tricker",
 }
 
 export type CharacterKeys = keyof typeof CharacterReportEnum;
@@ -43,7 +43,7 @@ export type ObservedValue = Partial<Record<keyof typeof ObservedEnum, number>>;
 export interface OptionItem {
   sentence: string;
   personality_points: ObservedValue;
-  trait: string
+  trait: string;
 }
 
 export interface QuestionItem {
@@ -51,3 +51,10 @@ export interface QuestionItem {
   question: string;
   options: OptionItem[];
 }
+
+export type RelationsBank = {
+  buddies: CharacterReportEnum[];
+  rivals: CharacterReportEnum[];
+};
+
+export type CharacterRelations = Record<CharacterReportEnum, RelationsBank>;

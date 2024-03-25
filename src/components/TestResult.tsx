@@ -4,6 +4,8 @@ import { CharacterReportEnum, ObservedEnum } from "../types/type";
 import { DICT } from "../dict";
 import Chip from "./Chip";
 import { useGlobalStore } from "../stores/store";
+import { CHARACTER_RELATIONS } from "../constants";
+import BuddyRIvals from "./BuddyRIvals";
 
 interface TestResultProps {
   char: CharacterReportEnum;
@@ -46,7 +48,7 @@ export default function TestResult({ char, gender }: TestResultProps) {
 
         <div className="pr-4 font-mono flex flex-col gap-[3px]">
           {Object.values(ObservedEnum).map((v, k) => (
-            <ParallelogramStat label={DICT[v].en} level={4} />
+            <ParallelogramStat label={DICT[v].en} level={5} />
           ))}
         </div>
       </div>
@@ -54,11 +56,14 @@ export default function TestResult({ char, gender }: TestResultProps) {
         &ldquo;{DICT[`desc_${CharacterReportEnum[char]}`].en}.&rdquo;
       </div>
       <div className="p-4">
-        <div className="text-2xl">Traits:</div>
-        <div className="flex font-mono">
-          <Chip label={DICT.trait_11.id} />
+        <div className="text-2xl">Traits :</div>
+        <div className="flex font-mono gap-1 flex-wrap">
+          {answersLog.map((v, k) => (
+            <Chip label={DICT[`trait_${k + 1}${v + 1}`].en} />
+          ))}
         </div>
       </div>
+      <BuddyRIvals char={char} gender={gender} />
     </div>
   );
 }

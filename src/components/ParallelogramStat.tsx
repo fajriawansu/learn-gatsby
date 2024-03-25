@@ -13,8 +13,8 @@ export default function ParallelogramStat({ label, level }: Props) {
   return (
     <div className="flex gap-1 text-sm items-center">
       <div className="w-[82px]">{label}</div>
-      <div className="flex gap-1 ml-1">
-        {Array.from(Array(5)).map((v, k) => (
+      <div className="flex gap-1 ml-1 min-w-20">
+        {Array.from(Array(level)).map((v, k) => (
           <Blok
             className={`${
               k === 0
