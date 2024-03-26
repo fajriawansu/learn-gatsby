@@ -13,6 +13,7 @@ interface BearState {
   personalityPoints: Record<keyof typeof ObservedEnum, number>;
   updatePoint: (persona: ObservedValue, char: CharacterPoints) => void;
   setActiveStoryIdx: (idx: number) => void;
+  updateAnswersLog: (questionNumber: number, value: number) => void
 }
 
 function sumPersonalities(
@@ -44,8 +45,8 @@ function sumCharacters(
 }
 
 export const useGlobalStore = create<BearState>()((set) => ({
-  activeStoryIdx: 99,
-  answersLog: [1, 1, 1, 1, 1, 1, 1, 1, 1],
+  activeStoryIdx: 1,
+  answersLog: [],
   characterPoints: {
     chance_maker: 0,
     firework_launcher: 0,
@@ -85,6 +86,15 @@ export const useGlobalStore = create<BearState>()((set) => ({
     set(() => ({
       activeStoryIdx: idx,
     })),
+    updateAnswersLog: (qNumber: number, val: number) => {
+      set(state => {
+        let temp = state.answersLog;
+        temp[qNumber-1] = val;
+        return {
+          answersLog: temp
+        }
+      })
+    }
 }));
 
 // const x = Object.keys(CharacterReportEnum).map(v => ({[v]: 0})).reduce(

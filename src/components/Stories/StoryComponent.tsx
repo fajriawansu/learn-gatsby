@@ -13,13 +13,14 @@ export default function StoryComponent({
   const textRef = useRef<HTMLDivElement>(null);
   const { setActiveStoryIdx } = useGlobalStore();
   const [visible, setVisible] = useState(true);
-  const [skipAnimation, setSkipAnimation] = useState(false);
+  const [skipAnimation, setSkipAnimation] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
   const [checkedIdx, setCheckedIdx] = useState<number>();
 
   useEffect(() => {
     if (!visible) {
       setTimeout(() => {
+        console.log(question.number, checkedIdx);
         setActiveStoryIdx(question.number + 1);
       }, 1000);
     }

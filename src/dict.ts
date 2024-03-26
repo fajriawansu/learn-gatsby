@@ -76,7 +76,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q4_opt2: {
-    id: "Gagak hitam, dia langsung hinggap di bahu kananmu, kau bisa berkomunikasi dengan telepati.",
+    id: "Gagak hitam, dia langsung hinggap di bahu kananmu, kau bisa berkomunikasi lewat telepati.",
     en: "",
   },
   q4_opt3: {
@@ -287,14 +287,14 @@ const CHARACTER_RESULT_BANK: Dictionaries = {
   },
   [CharacterReportEnum.villain_material]: {
     id: "Bakal Kriminal",
-    en: "villain Material",
+    en: "Villain Material",
   },
   [CharacterReportEnum.all_rounder]: {
     id: "Si Serba Bisa",
     en: "All Rounder",
   },
   [CharacterReportEnum.fair_tricker]: {
-    id: "Pencari Celah",
+    id: "Penipu Adil",
     en: "Fair Tricker",
   },
 };
@@ -412,76 +412,76 @@ const TRAIT_BANK: Dictionaries = {
 
 const CHAR_DESC_BANK: CharacterDescDict = {
   desc_chance_maker: {
-    en: "If you think you can defeat me for second time, you are lying to yourself",
-    id: "Jika kau kira bisa mengalahkanku untuk kedua kalinya, kau berbohong pada dirimu sendiri",
+    en: "If you think you can defeat me for second time, you are lying to yourself.",
+    id: "Jika kau kira bisa mengalahkanku untuk kedua kalinya, kau berbohong pada dirimu sendiri.",
   },
   desc_firework_launcher: {
     en: "If all the end are not exploded, so it's still burning!",
     id: "Jika semua akhir tidak meledak, maka ini masih terbakar!",
   },
   desc_heist_mastermind: {
-    en: "The whole escape plan are in my pocket",
-    id: "Semua rencana pelarian ada di sakuku",
+    en: "The whole escape plan are in my pocket.",
+    id: "Semua rencana pelarian ada di sakuku.",
   },
   desc_hero_poser: {
-    en: "Sorry for coming late but thanks for me later, you don't need to worry from now",
-    id: "Maaf datang terlambat tapi berterima kasih lah, kau tidak perlu khawatir mulai sekarang",
+    en: "Sorry for coming late but thanks for me later, you don't need to worry from now.",
+    id: "Maaf datang terlambat tapi berterima kasih lah, kau tidak perlu khawatir mulai sekarang.",
   },
   desc_janken_master: {
-    en: "What you called as luckiest luck is tattooed naturally in my DNA",
-    id: "Apa yang kau sebut sebagai kepaling-beruntungan sudah tertato dengan alami di DNA-ku",
+    en: "What you called as luckiest luck is tattooed naturally in my DNA.",
+    id: "Apa yang kau sebut sebagai kepaling-beruntungan sudah tertato dengan alami di DNA-ku.",
   },
   desc_masochistic_dreamer: {
     en: "What if i spoiled you that you mean nothing for the world? Are you still not join with the titan rumble?",
     id: "Bagaimana jika kubocorkan bahwa kau tidak berarti untuk dunia? Apa kau tetap tidak bergabung dengan deruan raksasa?",
   },
   desc_people_champion: {
-    en: "I know i'm not the person you are chasing for, but the incline and slippery road know me so loud. I belong to the path",
-    id: "Aku tahu 'ku bukan seseorang yang kau kejar, tapi tanjakan dan jalan licin itu sangat mengenalku. Saya milik Sang Penjalan",
+    en: "I know i'm not the person you are chasing for, but the incline and slippery road know me so loud. I belong to the path.",
+    id: "Aku tahu 'ku bukan seseorang yang kau kejar, tapi tanjakan dan jalan licin itu sangat mengenalku. Saya milik Sang Penjalan.",
   },
   desc_pirate_crew: {
-    en: "I don't need the story, the story need me",
-    id: "'ku tidak butuh cerita, cerita yang butuh aku",
+    en: "I don't need the story, the story need me.",
+    id: "Aku tidak butuh cerita, cerita yang membutuhkanku.",
   },
   desc_reader_in_the_corner: {
-    en: "I see the world in chapter 57 verse 7",
-    id: "Aku melihat dunia di bab 57 syair ke 7",
+    en: "I see the world in chapter 47 verse 36.",
+    id: "Aku melihat dunia di bab 47 syair ke 36.",
   },
   desc_sad_swallow: {
-    en: "I eat people maturnity everyday and still hungry",
-    id: "Aku memakan kedewasaan manusia setiap hari dan tetap lapar",
+    en: "I eat people maturnity everyday and still hungry.",
+    id: "Aku memakan kedewasaan manusia setiap hari dan tetap lapar.",
   },
   desc_shadow_witch: {
-    en: "Spell the symphony but not for me, I'm the missing light of the falling sun",
-    id: "Rapalkan simfoni tapi bukan untukku, aku adalah cahaya yang hilang dari matahari yang jatuh",
+    en: "Spell the symphony but not for me, I'm the missing light of the falling sun.",
+    id: "Rapalkan simfoni tapi bukan untukku, aku adalah cahaya yang hilang dari matahari yang jatuh.",
   },
   desc_step_faker: {
-    en: "I'm not leaving even you can't hear my step anymore, you can't feel me cause I'm waiting on my own",
-    id: "Saya tidak pergi walau kau tidak mendengar langkahku lagi, kau tidak merasakan sebab saya menunggu di jalanku sendiri",
+    en: "I'm not leaving even you can't hear my step anymore, you can't feel me cause I'm waiting on my own.",
+    id: "Saya tidak pergi walau kau tidak mendengar langkahku lagi, kau tidak merasakan sebab saya menunggu di jalanku sendiri.",
   },
   desc_subway_artist: {
-    en: "The world my disapprove, but my world is only art",
-    id: "Dunia boleh mencekal, tapi duniaku hanyalah seni",
+    en: "The world my disapprove, but my world is only art.",
+    id: "Dunia boleh mencekal, tapi duniaku hanyalah seni.",
   },
   desc_tomb_guard: {
-    en: "Without hesitation, I miss my lover to the bone",
-    id: "Tanpa keraguan, aku merindukan kekasihku sampai ke tulang",
+    en: "Without hesitation, I miss my lover to the bone.",
+    id: "Tanpa keraguan, aku merindukan kekasihku sampai ke tulang.",
   },
   desc_twister_fate: {
-    en: "As long as the thing is endurable, I prefer to endure it",
-    id: "Selama perihal masih bisa ditahan, aku memilih menahannya",
+    en: "As long as the thing is endurable, I prefer to endure it.",
+    id: "Selama perihal masih bisa ditahan, aku memilih menahannya.",
   },
   desc_villain_material: {
-    en: "You freeze my sea mind, so I lead the alien trooper to gasify your world. I'm the spirit of what you called as villain but a champ for timeskip",
-    id: "Kau bekukan laut pikiranku, maka kupimpin pasukan alien untuk mengubah duniamu menjadi gas. Aku adalah jiwa yang kau sebut sebagai penjahat tetapi jawara untuk waktu yang meyingkat",
+    en: "You freeze my sea mind, so I lead the alien troopers to gasify your world. I'm the spirit of what you called as villain but a champ for timeskip.",
+    id: "Kau bekukan laut pikiranku, maka kupimpin pasukan alien untuk mengubah duniamu menjadi gas. Aku adalah jiwa yang kau sebut sebagai penjahat tetapi jawara untuk waktu yang meyingkat.",
   },
   desc_fair_tricker: {
-    en: "The more you know about me, the more I trick you successfully",
-    id: "Semakin banyak kau tahu soalku, semakin berhasil aku menipumu",
+    en: "The more you know about me, the more I trick you successfully.",
+    id: "Semakin banyak kau tahu soalku, semakin berhasil aku menipumu.",
   },
   desc_all_rounder: {
-    en: "I am the wings of aves, the fins of pisces, and the lungs of mammals",
-    id: "Aku adalah sayap sang aves, sirip sang ikan, dan paru-paru sang mamalia",
+    en: "I am the wings of aves, the fins of pisces, and the lungs of mammals.",
+    id: "Aku adalah sayap sang aves, sirip sang ikan, dan paru-paru sang mamalia.",
   },
 };
 

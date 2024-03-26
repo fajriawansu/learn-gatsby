@@ -53,7 +53,7 @@ const IndexPage: React.FC<PageProps> = () => {
       {activeStoryIdx === 10 && <StoryTen />}
       {activeStoryIdx === 11 && <Epilogue />}
       {activeStoryIdx > 11 && (
-        <TestResult char={CharacterReportEnum.villain_material} gender="boy" />
+        <TestResult char={CharacterReportEnum.all_rounder} gender="girl" />
       )}
     </Layout>
   );
