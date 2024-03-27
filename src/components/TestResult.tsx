@@ -18,6 +18,8 @@ export default function TestResult({ char, gender }: TestResultProps) {
   const { answersLog } = useGlobalStore();
   const [downloading, setDownloading] = useState(false);
 
+  console.log({answersLog})
+
   useEffect(() => {
     setTimeout(() => {
       setGlitch(!glitch);
@@ -89,7 +91,7 @@ export default function TestResult({ char, gender }: TestResultProps) {
           <div className="text-2xl mb-2">Traits :</div>
           <div className="flex font-mono gap-1 flex-wrap">
             {answersLog.map((v, k) => (
-              <Chip label={DICT[`trait_${k + 1}${v + 1}`].en} />
+              k < 9 && <Chip label={DICT[`trait_${k + 1}${v + 1}`].en} />
             ))}
           </div>
         </div>

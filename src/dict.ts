@@ -322,7 +322,7 @@ const TRAIT_BANK: Dictionaries = {
   },
   trait_23: {
     id: "Bisa Menunggu",
-    en: "patient",
+    en: "Patient",
   },
   trait_31: {
     id: "Penuh Harapan",
@@ -389,24 +389,24 @@ const TRAIT_BANK: Dictionaries = {
     en: "We Run Together",
   },
   trait_82: {
-    id: "Kita Selesaikan Sendiri-sendiri",
-    en: "We Solve Ourselves",
+    id: "Kita Kerjakan Sendiri-Sendiri",
+    en: "I Do Mine, You Do Yours",
   },
   trait_83: {
     id: "Kita Hadapi Bersama",
-    en: "We Face Together",
+    en: "We Face it Together",
   },
   trait_91: {
-    id: "Penikmat Alam",
-    en: "Nature Enjoyer",
+    id: "Senang Dibantu",
+    en: "Happy to be Helped",
   },
   trait_92: {
-    id: "Pengguna Alam",
-    en: "Nature User",
+    id: "Selesaikan Sendiri Dulu",
+    en: "Finish it Yourself First",
   },
   trait_93: {
-    id: "Pengamat Alam",
-    en: "Nature Observer",
+    id: "Bergantung Mood",
+    en: "Moody",
   },
 };
 

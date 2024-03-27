@@ -11,7 +11,7 @@ export default function StoryComponent({
   question,
 }: StoryComponentProps) {
   const textRef = useRef<HTMLDivElement>(null);
-  const { setActiveStoryIdx } = useGlobalStore();
+  const { setActiveStoryIdx, updateAnswersLog } = useGlobalStore();
   const [visible, setVisible] = useState(true);
   const [skipAnimation, setSkipAnimation] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
@@ -20,7 +20,7 @@ export default function StoryComponent({
   useEffect(() => {
     if (!visible) {
       setTimeout(() => {
-        console.log(question.number, checkedIdx);
+        updateAnswersLog(question.number, Number(checkedIdx) - 1)
         setActiveStoryIdx(question.number + 1);
       }, 1000);
     }
