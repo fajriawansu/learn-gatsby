@@ -3,10 +3,11 @@ import { TypeAnimation } from "react-type-animation";
 import { splitStringToTypeAnimation } from "../../helpers/splitStringToTypeAnimation";
 import { QUESTIONS_CONST } from "../../constants";
 import { useGlobalStore } from "../../stores/store";
+import removeTextSplitter from "../../helpers/removeTextSplitter";
 
 export default function Epilogue() {
-  const { setActiveStoryIdx } = useGlobalStore();
-  const [showNext, setShowNext] = useState(false);
+  const { setActiveStoryIdx, noAnimation } = useGlobalStore();
+  const [showNext, setShowNext] = useState(noAnimation);
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     if (!visible) {
@@ -28,14 +29,25 @@ export default function Epilogue() {
       </div>
       <div className={`${visible ? "" : "opacityOut"}`}>
         <div className="p-2 rounded-md">
-          <TypeAnimation
-            sequence={splitStringToTypeAnimation({
-              text: QUESTIONS_CONST[11].question,
-              splitter: "|",
-              onFinish: () => setShowNext(true),
-            })}
-            speed={70}
-          />
+          {noAnimation ? (
+            <div
+              style={{
+                whiteSpace: "pre-line",
+              }}
+              dangerouslySetInnerHTML={{
+                __html: removeTextSplitter(QUESTIONS_CONST[11].question),
+              }}
+            />
+          ) : (
+            <TypeAnimation
+              sequence={splitStringToTypeAnimation({
+                text: QUESTIONS_CONST[11].question,
+                splitter: "|",
+                onFinish: () => setShowNext(true),
+              })}
+              speed={70}
+            />
+          )}
         </div>
         {showNext && (
           <div className="flex justify-end">

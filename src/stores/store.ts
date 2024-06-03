@@ -4,16 +4,19 @@ import {
   CharacterReportEnum,
   ObservedEnum,
   ObservedValue,
+  PersonalitiesStoreType,
 } from "../types/type";
 
 interface BearState {
   activeStoryIdx: number;
+  noAnimation: boolean;
   answersLog: number[];
   characterPoints: Record<keyof typeof CharacterReportEnum, number>;
-  personalityPoints: Record<keyof typeof ObservedEnum, number>;
+  personalityPoints: PersonalitiesStoreType;
   updatePoint: (persona: ObservedValue, char: CharacterPoints) => void;
   setActiveStoryIdx: (idx: number) => void;
-  updateAnswersLog: (questionNumber: number, value: number) => void
+  updateAnswersLog: (questionNumber: number, value: number) => void;
+  handleSkipAnimation: (skip: boolean) => void;
 }
 
 function sumPersonalities(
@@ -45,7 +48,8 @@ function sumCharacters(
 }
 
 export const useGlobalStore = create<BearState>()((set) => ({
-  activeStoryIdx: 9,
+  activeStoryIdx: 0,
+  noAnimation: true,
   answersLog: [],
   characterPoints: {
     chance_maker: 0,
@@ -68,14 +72,14 @@ export const useGlobalStore = create<BearState>()((set) => ({
     all_rounder: 0,
   },
   personalityPoints: {
-    creativity: 20,
-    charisma: 20,
-    luck: 20,
-    anxiety: 20,
-    courage: 20,
-    fortitude: 20,
-    selfishness: 20,
-    curiosity: 20,
+    creativity: 1,
+    charisma: 1,
+    luck: 1,
+    anxiety: 1,
+    courage: 1,
+    fortitude: 1,
+    selfishness: 1,
+    curiosity: 1,
   },
   updatePoint: (personas, chars) =>
     set((state) => ({
@@ -86,16 +90,20 @@ export const useGlobalStore = create<BearState>()((set) => ({
     set(() => ({
       activeStoryIdx: idx,
     })),
-    updateAnswersLog: (qNumber: number, val: number) => {
-      set(state => {
-        let temp = state.answersLog;
-        temp[qNumber-1] = val;
-        console.log({temp})
-        return {
-          answersLog: temp
-        }
-      })
-    }
+  updateAnswersLog: (qNumber: number, val: number) => {
+    set((state) => {
+      let temp = state.answersLog;
+      temp[qNumber - 1] = val;
+      console.log({ temp });
+      return {
+        answersLog: temp,
+      };
+    });
+  },
+  handleSkipAnimation: (bool: boolean) =>
+    set(() => ({
+      noAnimation: bool,
+    })),
 }));
 
 // const x = Object.keys(CharacterReportEnum).map(v => ({[v]: 0})).reduce(

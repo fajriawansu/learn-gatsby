@@ -11,16 +11,20 @@ export default function StoryComponent({
   question,
 }: StoryComponentProps) {
   const textRef = useRef<HTMLDivElement>(null);
-  const { setActiveStoryIdx, updateAnswersLog } = useGlobalStore();
+  const {
+    setActiveStoryIdx,
+    updateAnswersLog,
+    noAnimation,
+    handleSkipAnimation,
+  } = useGlobalStore();
   const [visible, setVisible] = useState(true);
-  const [skipAnimation, setSkipAnimation] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
   const [checkedIdx, setCheckedIdx] = useState<number>();
 
   useEffect(() => {
     if (!visible) {
       setTimeout(() => {
-        updateAnswersLog(question.number, Number(checkedIdx) - 1)
+        updateAnswersLog(question.number, Number(checkedIdx) - 1);
         setActiveStoryIdx(question.number + 1);
       }, 1000);
     }
@@ -52,7 +56,7 @@ export default function StoryComponent({
             <>
               <div className="p-2 max-h-[45vh] overflow-auto">
                 <div className="rounded-md">
-                  {skipAnimation ? (
+                  {noAnimation ? (
                     <div
                       style={{
                         whiteSpace: "pre-line",
@@ -69,15 +73,15 @@ export default function StoryComponent({
                       sequence={splitStringToTypeAnimation({
                         text: question.question,
                         splitter: "|",
-                        onFinish: () => setSkipAnimation(true),
+                        onFinish: () => handleSkipAnimation(true),
                       })}
                       speed={80}
                     />
                   )}
                 </div>
-                <div ref={skipAnimation ? null : textRef} />
+                <div ref={noAnimation ? null : textRef} />
               </div>
-              {skipAnimation && (
+              {noAnimation && (
                 <div
                   className="flex justify-end mt-1 text-md dip-animation cursor-pointer font-mono"
                   style={{ animationDuration: "1s" }}
@@ -124,7 +128,7 @@ export default function StoryComponent({
                   className="cursor-pointer font-mono"
                   onClick={() => {
                     setShowOptions(false);
-                    setSkipAnimation(true);
+                    handleSkipAnimation(true);
                   }}
                 >
                   {"<<<"}

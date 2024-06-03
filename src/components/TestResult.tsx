@@ -6,6 +6,7 @@ import Chip from "./Chip";
 import { useGlobalStore } from "../stores/store";
 import BuddyRIvals from "./BuddyRIvals";
 import * as htmlToImage from "html-to-image";
+import { personalityCalculation } from "../helpers/calculateResult";
 
 interface TestResultProps {
   char: CharacterReportEnum;
@@ -18,7 +19,7 @@ export default function TestResult({ char, gender }: TestResultProps) {
   const { answersLog } = useGlobalStore();
   const [downloading, setDownloading] = useState(false);
 
-  console.log({answersLog})
+  // console.log({ answersLog });
 
   useEffect(() => {
     setTimeout(() => {
@@ -57,7 +58,7 @@ export default function TestResult({ char, gender }: TestResultProps) {
       >
         <div className="p-4 flex w-full justify-between">
           <div className="min-w-[120px]">
-            <span className="text-2xl">SABIL</span> <br />
+            <span className="text-2xl">Fajri</span> <br />
             Your duality is :
           </div>
           <div className="text-2xl flex flex-col text-end justify-center">
@@ -76,8 +77,8 @@ export default function TestResult({ char, gender }: TestResultProps) {
           </div>
 
           <div className="pr-4 font-mono flex flex-col gap-[3px]">
-            {Object.values(ObservedEnum).map((v, k) => (
-              <ParallelogramStat label={DICT[v].en} level={5} />
+            {Object.entries(personalityCalculation(answersLog)).map((v, k) => (
+              <ParallelogramStat label={DICT[v[0]].en} level={v[1] as 1 | 2 | 3 | 4 | 5} />
             ))}
           </div>
         </div>
@@ -90,13 +91,14 @@ export default function TestResult({ char, gender }: TestResultProps) {
         <div className="m-4">
           <div className="text-2xl mb-2">Traits :</div>
           <div className="flex font-mono gap-1 flex-wrap">
-            {answersLog.map((v, k) => (
-              k < 9 && <Chip label={DICT[`trait_${k + 1}${v + 1}`].en} />
-            ))}
+            {answersLog.map(
+              (v, k) =>
+                k < 9 && <Chip label={DICT[`trait_${k + 1}${v + 1}`].en} />
+            )}
           </div>
         </div>
         <div className={`mt-4 px-4 flex ${downloading ? "mb-4" : "mb-12"}`}>
-          <BuddyRIvals char={char} gender={gender} />
+          <BuddyRIvals char={char} gender={gender === "boy" ? "girl" : "boy"} />
         </div>
       </div>
       <div className="absolute bottom-4 right-0 flex items-center justify-center w-full font-mono">

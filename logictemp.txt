@@ -63,7 +63,7 @@ traits
 52 = spread all oportunity
 53 = looking for something new
 
-61 = sacrifice stranger
+61 = sacrifice the stranger
 62 = trying new stuff
 63 = belief with your master
 
@@ -72,7 +72,7 @@ traits
 73 = danger can be abandoned
 
 81 = cheering your friends
-82 = me first
+82 = yours first
 83 = dive together
 
 91 = search opportunity

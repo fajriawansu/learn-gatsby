@@ -58,3 +58,5 @@ export type RelationsBank = {
 };
 
 export type CharacterRelations = Record<CharacterReportEnum, RelationsBank>;
+
+export type PersonalitiesStoreType = Record<keyof typeof ObservedEnum, number>;

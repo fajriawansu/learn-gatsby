@@ -22,12 +22,14 @@ import Epilogue from "../components/Stories/Epilogue";
 import TestResult from "../components/TestResult";
 
 const IndexPage: React.FC<PageProps> = () => {
-  const { personalityPoints, characterPoints, updatePoint, activeStoryIdx } =
-    useGlobalStore();
-
-  const handleCheckPoint = () => {
-    console.log({ personalityPoints, characterPoints });
-  };
+  const {
+    personalityPoints,
+    characterPoints,
+    updatePoint,
+    activeStoryIdx,
+    handleSkipAnimation,
+    noAnimation,
+  } = useGlobalStore();
 
   const handleSubmitOption = (
     persona: ObservedValue,
@@ -36,10 +38,11 @@ const IndexPage: React.FC<PageProps> = () => {
     updatePoint(persona, char);
   };
 
-  console.log({ activeStoryIdx });
-
   return (
     <Layout noPadding={activeStoryIdx > 11}>
+      {/* <button onClick={() => handleSkipAnimation(true)}>
+        {noAnimation ? "Skipped" : "Skip Animation"}
+      </button> */}
       {activeStoryIdx === 0 && <Prologue />}
       {activeStoryIdx === 1 && <StoryOne />}
       {activeStoryIdx === 2 && <StoryTwo />}
@@ -53,7 +56,7 @@ const IndexPage: React.FC<PageProps> = () => {
       {activeStoryIdx === 10 && <StoryTen />}
       {activeStoryIdx === 11 && <Epilogue />}
       {activeStoryIdx > 11 && (
-        <TestResult char={CharacterReportEnum.all_rounder} gender="girl" />
+        <TestResult char={CharacterReportEnum.chance_maker} gender="girl" />
       )}
     </Layout>
   );
