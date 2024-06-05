@@ -168,7 +168,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
     en: "",
   },
   q10_opt1: {
-    id: 'Lingkaran yang sisi-sisinya terbuat dari ranting-ranting pohon (terdapat tulisan "exit")',
+    id: 'Lingkaran yang sisi-sisinya terbuat dari ranting-ranting pohon',
     en: "",
   },
   q10_opt2: {

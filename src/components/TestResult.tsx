@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ParallelogramStat from "./ParallelogramStat";
-import { CharacterReportEnum, ObservedEnum } from "../types/type";
+import { CharacterReportEnum, ObservedEnum, PlayerInfoType } from "../types/type";
 import { DICT } from "../dict";
 import Chip from "./Chip";
 import { useGlobalStore } from "../stores/store";
@@ -10,16 +10,14 @@ import { personalityCalculation } from "../helpers/calculateResult";
 
 interface TestResultProps {
   char: CharacterReportEnum;
-  gender: "boy" | "girl";
+  playerInfo: PlayerInfoType;
 }
 
-export default function TestResult({ char, gender }: TestResultProps) {
+export default function TestResult({ char, playerInfo }: TestResultProps) {
   const [glitch, setGlitch] = useState(false);
 
-  const { answersLog } = useGlobalStore();
+  const { answersLog, lastAnswer } = useGlobalStore();
   const [downloading, setDownloading] = useState(false);
-
-  // console.log({ answersLog });
 
   useEffect(() => {
     setTimeout(() => {
@@ -70,14 +68,14 @@ export default function TestResult({ char, gender }: TestResultProps) {
             className={`testResult ${glitch && !downloading && "glitchPlease"}`}
           >
             <div className="imgWrap">
-              <img className="red" src={`16_${char}_${gender}.jpg`} />
-              <img className="green" src={`16_${char}_${gender}.jpg`} />
-              <img className="blue" src={`16_${char}_${gender}.jpg`} />
+              <img className="red" src={`16_${char}_${playerInfo.gender}.jpg`} />
+              <img className="green" src={`16_${char}_${playerInfo.gender}.jpg`} />
+              <img className="blue" src={`16_${char}_${playerInfo.gender}.jpg`} />
             </div>
           </div>
 
           <div className="pr-4 font-mono flex flex-col gap-[3px]">
-            {Object.entries(personalityCalculation(answersLog)).map((v, k) => (
+            {Object.entries(personalityCalculation(answersLog, lastAnswer)).map((v, k) => (
               <ParallelogramStat label={DICT[v[0]].en} level={v[1] as 1 | 2 | 3 | 4 | 5} />
             ))}
           </div>
@@ -98,7 +96,7 @@ export default function TestResult({ char, gender }: TestResultProps) {
           </div>
         </div>
         <div className={`mt-4 px-4 flex ${downloading ? "mb-4" : "mb-12"}`}>
-          <BuddyRIvals char={char} gender={gender === "boy" ? "girl" : "boy"} />
+          <BuddyRIvals char={char} gender={playerInfo.gender === "boy" ? "girl" : "boy"} />
         </div>
       </div>
       <div className="absolute bottom-4 right-0 flex items-center justify-center w-full font-mono">

@@ -2,21 +2,27 @@ import { create } from "zustand";
 import {
   CharacterPoints,
   CharacterReportEnum,
+  LastAnsweredType,
   ObservedEnum,
   ObservedValue,
   PersonalitiesStoreType,
+  PlayerInfoType,
 } from "../types/type";
 
 interface BearState {
+  playerInfo: PlayerInfoType;
   activeStoryIdx: number;
   noAnimation: boolean;
   answersLog: number[];
+  lastAnswer?: LastAnsweredType;
   characterPoints: Record<keyof typeof CharacterReportEnum, number>;
   personalityPoints: PersonalitiesStoreType;
   updatePoint: (persona: ObservedValue, char: CharacterPoints) => void;
   setActiveStoryIdx: (idx: number) => void;
   updateAnswersLog: (questionNumber: number, value: number) => void;
   handleSkipAnimation: (skip: boolean) => void;
+  submitLastAnswer: (val: LastAnsweredType) => void;
+  setPlayerInfo: (info: PlayerInfoType) => void;
 }
 
 function sumPersonalities(
@@ -48,7 +54,8 @@ function sumCharacters(
 }
 
 export const useGlobalStore = create<BearState>()((set) => ({
-  activeStoryIdx: 0,
+  playerInfo: { name: "", gender: "boy" },
+  activeStoryIdx: 11,
   noAnimation: true,
   answersLog: [],
   characterPoints: {
@@ -94,15 +101,23 @@ export const useGlobalStore = create<BearState>()((set) => ({
     set((state) => {
       let temp = state.answersLog;
       temp[qNumber - 1] = val;
-      console.log({ temp });
       return {
         answersLog: temp,
       };
     });
   },
+  submitLastAnswer: (val: LastAnsweredType) => {
+    set(() => ({
+      lastAnswer: val,
+    }));
+  },
   handleSkipAnimation: (bool: boolean) =>
     set(() => ({
       noAnimation: bool,
+    })),
+  setPlayerInfo: (info: PlayerInfoType) =>
+    set(() => ({
+      playerInfo: info,
     })),
 }));
 

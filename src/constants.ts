@@ -397,12 +397,12 @@ export const CHARACTER_RELATIONS: CharacterRelations = {
 type ObservedGroupValue = Partial<Record<keyof typeof ObservedEnum, string[]>>;
 
 export const PERSONALITIES_BY_QUESTION: ObservedGroupValue = {
-  creativity: ['13','53','92'],
-  charisma: ['22','41','72'],
-  luck: ['33','92','63'],
-  anxiety: ['43','52','61'],
-  courage: ['11','42','51','83'],
-  fortitude: ['23','63','81', '94'],
-  selfishness: ['12','32','73','82'],
-  curiosity: ['21','31','71','91']
-}
+  creativity: ["13", "53", "92"],
+  charisma: ["22", "41", "72", "83"],
+  luck: ["33", "92", "63"],
+  anxiety: ["43", "52", "61", "72"],
+  courage: ["11", "42", "51", "83"],
+  fortitude: ["23", "63", "81"],
+  selfishness: ["12", "32", "73", "82"],
+  curiosity: ["21", "31", "71", "91"],
+};

@@ -12,10 +12,13 @@ export default function StoryComponent({
 }: StoryComponentProps) {
   const textRef = useRef<HTMLDivElement>(null);
   const {
+    activeStoryIdx,
     setActiveStoryIdx,
     updateAnswersLog,
     noAnimation,
     handleSkipAnimation,
+    submitLastAnswer,
+    answersLog,
   } = useGlobalStore();
   const [visible, setVisible] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
@@ -24,6 +27,13 @@ export default function StoryComponent({
   useEffect(() => {
     if (!visible) {
       setTimeout(() => {
+        if(activeStoryIdx === 10 && !!answersLog && typeof answersLog[0] === "number"){
+          if(answersLog[0] === Number(checkedIdx) - 1){
+            submitLastAnswer("exit");
+          } else if(Number(checkedIdx) - 1 === 3){
+            submitLastAnswer("toilet")
+          } else submitLastAnswer("another");
+        }
         updateAnswersLog(question.number, Number(checkedIdx) - 1);
         setActiveStoryIdx(question.number + 1);
       }, 1000);

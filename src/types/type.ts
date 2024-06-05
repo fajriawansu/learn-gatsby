@@ -60,3 +60,10 @@ export type RelationsBank = {
 export type CharacterRelations = Record<CharacterReportEnum, RelationsBank>;
 
 export type PersonalitiesStoreType = Record<keyof typeof ObservedEnum, number>;
+
+export type LastAnsweredType = "another" | "exit" | "toilet";
+
+export type PlayerInfoType = {
+  gender: "boy" | "girl";
+  name: string;
+};

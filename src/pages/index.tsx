@@ -20,23 +20,10 @@ import StoryNine from "../components/Stories/StoryNine";
 import StoryTen from "../components/Stories/StoryTen";
 import Epilogue from "../components/Stories/Epilogue";
 import TestResult from "../components/TestResult";
+import { finalDuality } from "../helpers/calculateResult";
 
 const IndexPage: React.FC<PageProps> = () => {
-  const {
-    personalityPoints,
-    characterPoints,
-    updatePoint,
-    activeStoryIdx,
-    handleSkipAnimation,
-    noAnimation,
-  } = useGlobalStore();
-
-  const handleSubmitOption = (
-    persona: ObservedValue,
-    char: CharacterPoints
-  ) => {
-    updatePoint(persona, char);
-  };
+  const { activeStoryIdx, answersLog, lastAnswer, playerInfo } = useGlobalStore();
 
   return (
     <Layout noPadding={activeStoryIdx > 11}>
@@ -56,7 +43,7 @@ const IndexPage: React.FC<PageProps> = () => {
       {activeStoryIdx === 10 && <StoryTen />}
       {activeStoryIdx === 11 && <Epilogue />}
       {activeStoryIdx > 11 && (
-        <TestResult char={CharacterReportEnum.chance_maker} gender="girl" />
+        <TestResult char={finalDuality(answersLog, lastAnswer)} playerInfo={playerInfo} />
       )}
     </Layout>
   );

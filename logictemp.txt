@@ -12,12 +12,12 @@ heist_mastermind HM
 subway_artist SA 13 53 92 (toilet)
 => if creativity + high charisma/courage = heist mastermind
 
->> charisma B 22 41 72
+>> charisma B 22 41 72 83
 hero_poser HP 22 41 72
 shadow_witch SW
 => if charisma + high selfishness/42 = shadow witch
 
->> anxiety D 43 52 61
+>> anxiety D 43 52 61 72
 sad_swallow SS 43 72
 step_faker SF 52 61
 
