@@ -46,29 +46,17 @@ export function finalDuality(
   answers: number[],
   last: LastAnsweredType | undefined
 ): CharacterReportEnum {
-  // const persona = personalityCalculation(answers, last);
-  const persona = {
-    creativity: 4,
-    charisma: 3,
-    luck: 3,
-    anxiety: 2,
-    courage: 2,
-    fortitude: 2,
-    selfishness: 2,
-    curiosity: 2,
-  }
+  const persona = personalityCalculation(answers, last);
   const stringQnA = answers.map((v, idx) => `${idx + 1}${v + 1}`);
   const hasFour3 = Object.values(persona).filter((v) => v >= 3).length >= 4;
-  let dominatedIdx = Object.values(persona).filter(v => v === 5)[0];
+  const has5 = Object.entries(persona).filter(v => v[1] === 5)[0];
+  const has4 = Object.entries(persona).filter(v => v[1] === 4)[0];
   const allHave2 = Object.values(persona).filter((v) => v >= 2).length === Object.values(persona).length
-  const mostDominatedPersona: ObservedEnum = Object.keys(persona)[
-    dominatedIdx
-  ] as unknown as ObservedEnum;
+  const mostDominatedPersona = has5 ? has5[0] : has4 ? has4[0] : undefined as unknown as ObservedEnum
 
-  console.log({ persona, last, hasFour3, dominatedIdx, stringQnA, allHave2 });
+  console.log({ persona, last, hasFour3, mostDominatedPersona, stringQnA, allHave2 });
 
   if (hasFour3) return CharacterReportEnum.all_rounder;
-  if (allHave2) return CharacterReportEnum.fair_tricker;
   switch (mostDominatedPersona) {
     case ObservedEnum.luck:
       if (persona.luck === 5) {
