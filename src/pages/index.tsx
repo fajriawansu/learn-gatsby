@@ -46,6 +46,16 @@ const IndexPage: React.FC<PageProps> = () => {
           playerInfo={playerInfo}
         />
       )}
+      <div className="fixed bottom-0 left-0 flex justify-center items-center w-full h-4 pb-4 text-white">
+        developed by:&nbsp;
+        <a
+          href="https://fajriawan.vercel.app/"
+          className="text-yellow-300 underline"
+          target="_blank"
+        >
+          fjrwn
+        </a>
+      </div>
     </Layout>
   );
 };
