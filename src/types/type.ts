@@ -62,8 +62,9 @@ export type CharacterRelations = Record<CharacterReportEnum, RelationsBank>;
 export type PersonalitiesStoreType = Record<keyof typeof ObservedEnum, number>;
 
 export type LastAnsweredType = "another" | "exit" | "toilet";
+export type GenderType = "boy" | "girl";
 
 export type PlayerInfoType = {
-  gender: "boy" | "girl";
+  gender?: GenderType;
   name: string;
 };

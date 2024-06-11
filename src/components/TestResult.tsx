@@ -60,7 +60,7 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
       >
         <div className="p-4 flex w-full justify-between">
           <div className="min-w-[120px]">
-            <span className="text-2xl">Fajri</span> <br />
+            <span className="text-2xl">{playerInfo.name}</span> <br />
             Your duality is :
           </div>
           <div className="text-2xl flex flex-col text-end justify-center">

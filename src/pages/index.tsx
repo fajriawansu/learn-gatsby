@@ -1,10 +1,5 @@
-import React, { useState } from "react";
-import type { HeadFC, PageProps } from "gatsby";
-import {
-  CharacterPoints,
-  CharacterReportEnum,
-  ObservedValue,
-} from "../types/type";
+import React from "react";
+import type { PageProps } from "gatsby";
 import { useGlobalStore } from "../stores/store";
 import { Layout } from "../components/Layout";
 import Prologue from "../components/Stories/Prologue";
@@ -21,15 +16,18 @@ import StoryTen from "../components/Stories/StoryTen";
 import Epilogue from "../components/Stories/Epilogue";
 import TestResult from "../components/TestResult";
 import { finalDuality } from "../helpers/calculateResult";
+import Register from "../components/Register";
 
 const IndexPage: React.FC<PageProps> = () => {
-  const { activeStoryIdx, answersLog, lastAnswer, playerInfo } = useGlobalStore();
+  const { activeStoryIdx, answersLog, lastAnswer, playerInfo } =
+    useGlobalStore();
 
   return (
     <Layout noPadding={activeStoryIdx > 11}>
       {/* <button onClick={() => handleSkipAnimation(true)}>
         {noAnimation ? "Skipped" : "Skip Animation"}
       </button> */}
+      {activeStoryIdx === 99 && <Register />}
       {activeStoryIdx === 0 && <Prologue />}
       {activeStoryIdx === 1 && <StoryOne />}
       {activeStoryIdx === 2 && <StoryTwo />}
@@ -42,8 +40,11 @@ const IndexPage: React.FC<PageProps> = () => {
       {activeStoryIdx === 9 && <StoryNine />}
       {activeStoryIdx === 10 && <StoryTen />}
       {activeStoryIdx === 11 && <Epilogue />}
-      {activeStoryIdx > 11 && (
-        <TestResult char={finalDuality(answersLog, lastAnswer)} playerInfo={playerInfo} />
+      {activeStoryIdx === 12 && (
+        <TestResult
+          char={finalDuality(answersLog, lastAnswer)}
+          playerInfo={playerInfo}
+        />
       )}
     </Layout>
   );

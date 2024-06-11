@@ -55,8 +55,8 @@ function sumCharacters(
 
 export const useGlobalStore = create<BearState>()((set) => ({
   playerInfo: { name: "", gender: "boy" },
-  activeStoryIdx: 0,
-  noAnimation: true,
+  activeStoryIdx: 99,
+  noAnimation: false,
   answersLog: [],
   characterPoints: {
     chance_maker: 0,
@@ -120,11 +120,3 @@ export const useGlobalStore = create<BearState>()((set) => ({
       playerInfo: info,
     })),
 }));
-
-// const x = Object.keys(CharacterReportEnum).map(v => ({[v]: 0})).reduce(
-//   (result, item) => {
-//     const key = Object.keys(item)[0];
-//     result[key] = item[key];
-//     return result;
-//   }, {}
-// );

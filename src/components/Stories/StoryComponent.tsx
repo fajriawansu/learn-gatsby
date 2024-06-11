@@ -23,15 +23,20 @@ export default function StoryComponent({
   const [visible, setVisible] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
   const [checkedIdx, setCheckedIdx] = useState<number>();
+  const [skipAnimation, setSkipAnimation] = useState(false);
 
   useEffect(() => {
     if (!visible) {
       setTimeout(() => {
-        if(activeStoryIdx === 10 && !!answersLog && typeof answersLog[0] === "number"){
-          if(answersLog[0] === Number(checkedIdx) - 1){
+        if (
+          activeStoryIdx === 10 &&
+          !!answersLog &&
+          typeof answersLog[0] === "number"
+        ) {
+          if (answersLog[0] === Number(checkedIdx) - 1) {
             submitLastAnswer("exit");
-          } else if(Number(checkedIdx) - 1 === 3){
-            submitLastAnswer("toilet")
+          } else if (Number(checkedIdx) - 1 === 3) {
+            submitLastAnswer("toilet");
           } else submitLastAnswer("another");
         }
         updateAnswersLog(question.number, Number(checkedIdx) - 1);
@@ -66,7 +71,7 @@ export default function StoryComponent({
             <>
               <div className="p-2 max-h-[45vh] overflow-auto">
                 <div className="rounded-md">
-                  {noAnimation ? (
+                  {skipAnimation ? (
                     <div
                       style={{
                         whiteSpace: "pre-line",
@@ -83,15 +88,15 @@ export default function StoryComponent({
                       sequence={splitStringToTypeAnimation({
                         text: question.question,
                         splitter: "|",
-                        onFinish: () => handleSkipAnimation(true),
+                        onFinish: () => setSkipAnimation(true),
                       })}
                       speed={80}
                     />
                   )}
                 </div>
-                <div ref={noAnimation ? null : textRef} />
+                <div ref={skipAnimation ? null : textRef} />
               </div>
-              {noAnimation && (
+              {skipAnimation && (
                 <div
                   className="flex justify-end mt-1 text-md dip-animation cursor-pointer font-mono"
                   style={{ animationDuration: "1s" }}
@@ -138,7 +143,7 @@ export default function StoryComponent({
                   className="cursor-pointer font-mono"
                   onClick={() => {
                     setShowOptions(false);
-                    handleSkipAnimation(true);
+                    setSkipAnimation(true);
                   }}
                 >
                   {"<<<"}

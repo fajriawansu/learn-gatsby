@@ -48,7 +48,7 @@ export function finalDuality(
 ): CharacterReportEnum {
   const persona = personalityCalculation(answers, last);
   const stringQnA = answers.map((v, idx) => `${idx + 1}${v + 1}`);
-  const hasFour3 = Object.values(persona).filter((v) => v >= 3).length >= 4;
+  const hasFour3 = Object.values(persona).filter((v) => v === 3).length >= 4;
   const has5 = Object.entries(persona).filter(v => v[1] === 5)[0];
   const has4 = Object.entries(persona).filter(v => v[1] === 4)[0];
   const allHave2 = Object.values(persona).filter((v) => v >= 2).length === Object.values(persona).length
