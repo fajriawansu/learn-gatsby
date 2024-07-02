@@ -59,7 +59,7 @@ function sumCharacters(
 export const useGlobalStore = create<BearState>()((set) => ({
   language: "id",
   playerInfo: { name: "", gender: "boy" },
-  activeStoryIdx: 12,
+  activeStoryIdx: 99,
   noAnimation: false,
   answersLog: [],
   characterPoints: {
