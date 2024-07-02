@@ -21,9 +21,6 @@ import Register from "../components/Register";
 const IndexPage: React.FC<PageProps> = () => {
   const { activeStoryIdx, answersLog, lastAnswer, playerInfo } =
     useGlobalStore();
-  window.onbeforeunload = function () {
-    return "";
-  };
 
   return (
     <Layout noPadding={activeStoryIdx > 11}>
