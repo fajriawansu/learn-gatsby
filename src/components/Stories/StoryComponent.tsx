@@ -68,7 +68,7 @@ export default function StoryComponent({
 
   return (
     <>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 font-mono text-sm">
         <div
           className={`w-full h-auto relative rounded-md overflow-hidden image-previewer ${
             visible ? "fadeInLeft" : "fadeOutRight"

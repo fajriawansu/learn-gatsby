@@ -17,7 +17,7 @@ export default function Epilogue() {
     }
   }, [visible]);
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 font-mono text-sm">
       <div
         className={`w-full h-auto rounded-md overflow-hidden relative image-previewer ${
           visible ? "fadeInLeft" : "fadeOutRight"
