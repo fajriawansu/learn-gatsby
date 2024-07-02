@@ -4,15 +4,20 @@ import { useGlobalStore } from "../stores/store";
 interface Props {
   className?: string;
   withInfo?: boolean;
+  scale?: number;
 }
 
-export default function LanguageSwitcher({ className, withInfo }: Props) {
+export default function LanguageSwitcher({
+  className,
+  withInfo,
+  scale,
+}: Props) {
   const { language, setLanguage } = useGlobalStore();
   return (
-    <div className="absolute right-4 top-12">
+    <div className={`${className} absolute right-4 top-12`}>
       {withInfo && <div className="text-xs text-center">test text in</div>}
       <div
-        className={`${className} flex w-16 h-6 rounded-md bg-grayest  p-1 text-sm items-center justify-center cursor-pointer`}
+        className={` flex w-16 h-6 rounded-md bg-grayest  p-1 text-sm items-center justify-center cursor-pointer scale-${scale}`}
         onClick={() => setLanguage(language === "id" ? "en" : "id")}
       >
         <div

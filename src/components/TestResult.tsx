@@ -52,7 +52,7 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
 
   return (
     <div className="relative">
-      <LanguageSwitcher className="!left-2 !top-1 opacity-40 scale-75" />
+      <LanguageSwitcher className="!left-0 !top-1 opacity-40" scale={75} />
       <div
         id="domEl"
         ref={domEl}
@@ -125,13 +125,24 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
         </div>
         <div className="w-full mb-20" />
       </div>
-      <div className="absolute bottom-10 right-0 flex items-center justify-center w-full font-mono">
+      <div className="absolute bottom-10 right-0 flex flex-col items-center justify-center w-full font-mono">
         <button
           onClick={downloadImage}
           className="py-1 px-3 border border-white text-xs rounded-md"
         >
           {isEn ? "Download Result" : "Download Hasil"}
         </button>
+        <div className="text-xs mt-1">
+          {" "}
+          Resource credit:{" "}
+          <a
+            href="https://perchance.org/ai-photo-generator"
+            className="text-yellow-300 underline"
+            target="_blank"
+          >
+            perchance.org
+          </a>
+        </div>
       </div>
     </div>
   );
