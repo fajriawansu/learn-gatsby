@@ -68,3 +68,5 @@ export type PlayerInfoType = {
   gender?: GenderType;
   name: string;
 };
+
+export type LanguageType = "id" | "en";

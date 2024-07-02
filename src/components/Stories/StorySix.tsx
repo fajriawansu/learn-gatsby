@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
 
 export default function StorySix() {
@@ -57,7 +56,7 @@ export default function StorySix() {
           </div>
         </div>
       }
-      question={QUESTIONS_CONST[6]}
+      questionIdx={6}
     />
   );
 }

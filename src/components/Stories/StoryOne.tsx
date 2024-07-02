@@ -1,6 +1,6 @@
 import React from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
+import { getQuestion } from "../../constants";
 
 export default function StoryOne() {
   return (
@@ -28,7 +28,7 @@ export default function StoryOne() {
           </div>
         </div>
       }
-      question={QUESTIONS_CONST[1]}
+      questionIdx={1}
     />
   );
 }

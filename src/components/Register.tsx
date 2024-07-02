@@ -3,9 +3,10 @@ import { PlayerInfoType } from "../types/type";
 import { useGlobalStore } from "../stores/store";
 import { TypeAnimation } from "react-type-animation";
 import { splitStringToTypeAnimation } from "../helpers/splitStringToTypeAnimation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Register() {
-  const { setActiveStoryIdx, setPlayerInfo } = useGlobalStore();
+  const { setActiveStoryIdx, setPlayerInfo, language } = useGlobalStore();
   const [value, setValue] = useState<PlayerInfoType>({
     name: "",
     gender: undefined,
@@ -17,8 +18,9 @@ export default function Register() {
   };
 
   return (
-    <div className="h-screen w-full flex justify-center items-center flex-col gap-2">
+    <div className="h-screen w-full flex justify-center items-center flex-col gap-2 relative">
       <h1 className="text-3xl">16Coolities</h1>
+      <LanguageSwitcher withInfo />
       <TypeAnimation
         sequence={splitStringToTypeAnimation({
           text: "everyone has a hidden personality, ||| and that`s cool",
@@ -48,7 +50,7 @@ export default function Register() {
               onClick={() => setValue({ ...value, gender: "boy" })}
             />
             <label htmlFor="gender" className="text-white ml-1">
-              Men
+              {language === "id" ? "Laki" : "Male"}
             </label>
           </div>
           <div>
@@ -58,7 +60,7 @@ export default function Register() {
               onClick={() => setValue({ ...value, gender: "girl" })}
             />
             <label htmlFor="gender" className="text-white ml-1">
-              Women
+              {language === "id" ? "Perempuan" : "Female"}
             </label>
           </div>
         </div>
@@ -67,7 +69,7 @@ export default function Register() {
           disabled={!value?.gender || value.name.length < 2}
           onClick={handleSubmit}
         >
-          Start Test
+          {language === "id" ? "Mulai" : "Start"}
         </button>
       </div>
     </div>

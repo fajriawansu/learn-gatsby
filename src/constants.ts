@@ -6,276 +6,276 @@ import {
   QuestionItem,
 } from "./types/type";
 
-export const QUESTIONS_CONST: QuestionItem[] = [
+export const getQuestion = (lan: "id" | "en") : QuestionItem[] => [
   {
     number: 0,
-    question: DICT.prologue["id"],
+    question: DICT.prologue[lan],
     options: [],
   },
   {
     number: 1,
-    question: DICT.q1["id"],
+    question: DICT.q1[lan],
     options: [
       {
-        sentence: DICT.q1_opt1["id"],
+        sentence: DICT.q1_opt1[lan],
         personality_points: {
           courage: 1,
         },
-        trait: DICT.trait_11["id"],
+        trait: DICT.trait_11[lan],
       },
       {
-        sentence: DICT.q1_opt2["id"],
+        sentence: DICT.q1_opt2[lan],
         personality_points: {
           selfishness: 1,
         },
-        trait: DICT.trait_12["id"],
+        trait: DICT.trait_12[lan],
       },
       {
-        sentence: DICT.q1_opt3["id"],
+        sentence: DICT.q1_opt3[lan],
         personality_points: {
           creativity: 1,
         },
-        trait: DICT.trait_13["id"],
+        trait: DICT.trait_13[lan],
       },
     ],
   },
   {
     number: 2,
-    question: DICT.q2["id"],
+    question: DICT.q2[lan],
     options: [
       {
-        sentence: DICT.q2_opt1["id"],
+        sentence: DICT.q2_opt1[lan],
         personality_points: {
           curiosity: 1,
         },
-        trait: DICT.trait_21["id"],
+        trait: DICT.trait_21[lan],
       },
       {
-        sentence: DICT.q2_opt2["id"],
+        sentence: DICT.q2_opt2[lan],
         personality_points: {
           charisma: 1,
         },
-        trait: DICT.trait_22["id"],
+        trait: DICT.trait_22[lan],
       },
       {
-        sentence: DICT.q2_opt3["id"],
+        sentence: DICT.q2_opt3[lan],
         personality_points: {
           fortitude: 1,
         },
-        trait: DICT.trait_23["id"],
+        trait: DICT.trait_23[lan],
       },
     ],
   },
   {
     number: 3,
-    question: DICT.q3["id"],
+    question: DICT.q3[lan],
     options: [
       {
-        sentence: DICT.q3_opt1["id"],
+        sentence: DICT.q3_opt1[lan],
         personality_points: {
           curiosity: 1,
         },
-        trait: DICT.trait_31["id"],
+        trait: DICT.trait_31[lan],
       },
       {
-        sentence: DICT.q3_opt2["id"],
+        sentence: DICT.q3_opt2[lan],
         personality_points: {
           selfishness: 1,
         },
-        trait: DICT.trait_32["id"],
+        trait: DICT.trait_32[lan],
       },
       {
-        sentence: DICT.q3_opt3["id"],
+        sentence: DICT.q3_opt3[lan],
         personality_points: {
           luck: 1,
         },
-        trait: DICT.trait_33["id"],
+        trait: DICT.trait_33[lan],
       },
     ],
   },
   {
     number: 4,
-    question: DICT.q4["id"],
+    question: DICT.q4[lan],
     options: [
       {
-        sentence: DICT.q4_opt1["id"],
+        sentence: DICT.q4_opt1[lan],
         personality_points: {
           charisma: 1,
         },
-        trait: DICT.trait_41["id"],
+        trait: DICT.trait_41[lan],
       },
       {
-        sentence: DICT.q4_opt2["id"],
+        sentence: DICT.q4_opt2[lan],
         personality_points: {
           courage: 1,
         },
-        trait: DICT.trait_42["id"],
+        trait: DICT.trait_42[lan],
       },
       {
-        sentence: DICT.q4_opt3["id"],
+        sentence: DICT.q4_opt3[lan],
         personality_points: {
           anxiety: 1,
         },
-        trait: DICT.trait_43["id"],
+        trait: DICT.trait_43[lan],
       },
     ],
   },
   {
     number: 5,
-    question: DICT.q5["id"],
+    question: DICT.q5[lan],
     options: [
       {
-        sentence: DICT.q5_opt1["id"],
+        sentence: DICT.q5_opt1[lan],
         personality_points: {
           courage: 1,
         },
-        trait: DICT.trait_51["id"],
+        trait: DICT.trait_51[lan],
       },
       {
-        sentence: DICT.q5_opt2["id"],
+        sentence: DICT.q5_opt2[lan],
         personality_points: {
           anxiety: 1,
         },
-        trait: DICT.trait_52["id"],
+        trait: DICT.trait_52[lan],
       },
       {
-        sentence: DICT.q5_opt3["id"],
+        sentence: DICT.q5_opt3[lan],
         personality_points: {
           creativity: 1,
         },
-        trait: DICT.trait_53["id"],
+        trait: DICT.trait_53[lan],
       },
     ],
   },
   {
     number: 6,
-    question: DICT.q6["id"],
+    question: DICT.q6[lan],
     options: [
       {
-        sentence: DICT.q6_opt1["id"],
+        sentence: DICT.q6_opt1[lan],
         personality_points: {
           anxiety: 1,
         },
-        trait: DICT.trait_61["id"],
+        trait: DICT.trait_61[lan],
       },
       {
-        sentence: DICT.q6_opt2["id"],
+        sentence: DICT.q6_opt2[lan],
         personality_points: {
           luck: 1,
         },
-        trait: DICT.trait_62["id"],
+        trait: DICT.trait_62[lan],
       },
       {
-        sentence: DICT.q6_opt3["id"],
+        sentence: DICT.q6_opt3[lan],
         personality_points: {
           fortitude: 1,
         },
-        trait: DICT.trait_63["id"],
+        trait: DICT.trait_63[lan],
       },
     ],
   },
   {
     number: 7,
-    question: DICT.q7["id"],
+    question: DICT.q7[lan],
     options: [
       {
-        sentence: DICT.q7_opt1["id"],
+        sentence: DICT.q7_opt1[lan],
         personality_points: {
           curiosity: 1,
         },
-        trait: DICT.trait_71["id"],
+        trait: DICT.trait_71[lan],
       },
       {
-        sentence: DICT.q7_opt2["id"],
+        sentence: DICT.q7_opt2[lan],
         personality_points: {
           charisma: 1,
         },
-        trait: DICT.trait_72["id"],
+        trait: DICT.trait_72[lan],
       },
       {
-        sentence: DICT.q7_opt3["id"],
+        sentence: DICT.q7_opt3[lan],
         personality_points: {
           selfishness: 1,
         },
-        trait: DICT.trait_73["id"],
+        trait: DICT.trait_73[lan],
       },
     ],
   },
   {
     number: 8,
-    question: DICT.q8["id"],
+    question: DICT.q8[lan],
     options: [
       {
-        sentence: DICT.q8_opt1["id"],
+        sentence: DICT.q8_opt1[lan],
         personality_points: {
           fortitude: 1,
         },
-        trait: DICT.trait_81["id"],
+        trait: DICT.trait_81[lan],
       },
       {
-        sentence: DICT.q8_opt2["id"],
+        sentence: DICT.q8_opt2[lan],
         personality_points: {
           selfishness: 1,
         },
-        trait: DICT.trait_82["id"],
+        trait: DICT.trait_82[lan],
       },
       {
-        sentence: DICT.q8_opt3["id"],
+        sentence: DICT.q8_opt3[lan],
         personality_points: {
           courage: 1,
         },
-        trait: DICT.trait_83["id"],
+        trait: DICT.trait_83[lan],
       },
     ],
   },
   {
     number: 9,
-    question: DICT.q9["id"],
+    question: DICT.q9[lan],
     options: [
       {
-        sentence: DICT.q9_opt1["id"],
+        sentence: DICT.q9_opt1[lan],
         personality_points: {
           curiosity: 1,
         },
-        trait: DICT.trait_91["id"],
+        trait: DICT.trait_91[lan],
       },
       {
-        sentence: DICT.q9_opt2["id"],
+        sentence: DICT.q9_opt2[lan],
         personality_points: {
           creativity: 1,
         },
-        trait: DICT.trait_92["id"],
+        trait: DICT.trait_92[lan],
       },
       {
-        sentence: DICT.q9_opt3["id"],
+        sentence: DICT.q9_opt3[lan],
         personality_points: {
           luck: 1,
         },
-        trait: DICT.trait_93["id"],
+        trait: DICT.trait_93[lan],
       },
     ],
   },
   {
     number: 10,
-    question: DICT.q10["id"],
+    question: DICT.q10[lan],
     options: [
       {
-        sentence: DICT.q10_opt1["id"],
+        sentence: DICT.q10_opt1[lan],
         personality_points: {},
         trait: "",
       },
       {
-        sentence: DICT.q10_opt2["id"],
+        sentence: DICT.q10_opt2[lan],
         personality_points: {},
         trait: "",
       },
       {
-        sentence: DICT.q10_opt3["id"],
+        sentence: DICT.q10_opt3[lan],
         personality_points: {},
         trait: "",
       },
       {
-        sentence: DICT.q10_opt4["id"],
+        sentence: DICT.q10_opt4[lan],
         personality_points: {},
         trait: "",
       },
@@ -283,7 +283,7 @@ export const QUESTIONS_CONST: QuestionItem[] = [
   },
   {
     number: 1,
-    question: DICT.epilogue["id"],
+    question: DICT.epilogue[lan],
     options: [],
   },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
+import { getQuestion } from "../../constants";
 
 export default function StoryFour() {
   return (
@@ -12,7 +12,7 @@ export default function StoryFour() {
           <div className="h-full w-full z-10 bg-darkest absolute left-0 top-0 dip-animation" />
         </>
       }
-      question={QUESTIONS_CONST[4]}
+      questionIdx={4}
     />
   );
 }

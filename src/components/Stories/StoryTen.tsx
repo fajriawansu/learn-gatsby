@@ -1,23 +1,21 @@
 import React, { useMemo } from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
 import { useGlobalStore } from "../../stores/store";
 
 export default function StoryTen() {
   const { answersLog } = useGlobalStore();
-  const exitPosition: string =
-    answersLog[0] === 0 ? "-48px" : answersLog[0] === 2 ? "+48px" : "";
 
-  const exitComp = useMemo(
-    () => (
+  const exitComp = useMemo(() => {
+    const exitPosition: string =
+      answersLog[0] === 0 ? "-48px" : answersLog[0] === 2 ? "+48px" : "";
+    return (
       <div
         className={`flex gap-2 absolute left-[calc(50%${exitPosition})] top-1/2 -translate-x-1/2 -translate-y-1/2 -mt-4 items-center dip-animation`}
       >
         <div>Exit</div>
       </div>
-    ),
-    [exitPosition]
-  );
+    );
+  }, [answersLog]);
 
   return (
     <StoryComponent
@@ -54,7 +52,7 @@ export default function StoryTen() {
           </div>
         </div>
       }
-      question={QUESTIONS_CONST[10]}
+      questionIdx={10}
     />
   );
 }

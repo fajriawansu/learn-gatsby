@@ -11,6 +11,7 @@ import { useGlobalStore } from "../stores/store";
 import BuddyRIvals from "./BuddyRIvals";
 import * as htmlToImage from "html-to-image";
 import { personalityCalculation } from "../helpers/calculateResult";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface TestResultProps {
   char: CharacterReportEnum;
@@ -20,8 +21,10 @@ interface TestResultProps {
 export default function TestResult({ char, playerInfo }: TestResultProps) {
   const [glitch, setGlitch] = useState(false);
 
-  const { answersLog, lastAnswer } = useGlobalStore();
+  const { answersLog, lastAnswer, language } = useGlobalStore();
   const [downloading, setDownloading] = useState(false);
+
+  const isEn = language === "en";
 
   useEffect(() => {
     setTimeout(() => {
@@ -49,6 +52,7 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
 
   return (
     <div className="relative">
+      <LanguageSwitcher className="!left-2 !top-1 opacity-40 scale-75" />
       <div
         id="domEl"
         ref={domEl}
@@ -91,7 +95,7 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
             {Object.entries(personalityCalculation(answersLog, lastAnswer)).map(
               (v) => (
                 <ParallelogramStat
-                  label={DICT[v[0]].en}
+                  label={DICT[v[0]][language]}
                   level={v[1] as 1 | 2 | 3 | 4 | 5}
                 />
               )
@@ -101,7 +105,7 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
         <div className="m-4">
           <div className="text-2xl mb-2">Motto :</div>
           <div className="font-mono">
-            &ldquo;{DICT[`desc_${CharacterReportEnum[char]}`].en}&rdquo;
+            &ldquo;{DICT[`desc_${CharacterReportEnum[char]}`][language]}&rdquo;
           </div>
         </div>
         <div className="m-4">
@@ -119,13 +123,14 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
             gender={playerInfo.gender === "boy" ? "girl" : "boy"}
           />
         </div>
+        <div className="w-full mb-20" />
       </div>
-      <div className="absolute bottom-4 right-0 flex items-center justify-center w-full font-mono">
+      <div className="absolute bottom-10 right-0 flex items-center justify-center w-full font-mono">
         <button
           onClick={downloadImage}
           className="py-1 px-3 border border-white text-xs rounded-md"
         >
-          Download Result
+          {isEn ? "Download Result" : "Download Hasil"}
         </button>
       </div>
     </div>

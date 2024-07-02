@@ -1,14 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { splitStringToTypeAnimation } from "../../helpers/splitStringToTypeAnimation";
 import removeTextSplitter from "../../helpers/removeTextSplitter";
 import { StoryComponentProps } from "./Story.type";
 import { useGlobalStore } from "../../stores/store";
+import { getQuestion } from "../../constants";
+import { QuestionItem } from "../../types/type";
 export default function StoryComponent({
   imgUrl,
   imgChild,
   imgClass,
-  question,
+  questionIdx,
 }: StoryComponentProps) {
   const textRef = useRef<HTMLDivElement>(null);
   const {
@@ -16,14 +18,23 @@ export default function StoryComponent({
     setActiveStoryIdx,
     updateAnswersLog,
     noAnimation,
-    handleSkipAnimation,
     submitLastAnswer,
     answersLog,
+    language,
   } = useGlobalStore();
   const [visible, setVisible] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
   const [checkedIdx, setCheckedIdx] = useState<number>();
-  const [skipAnimation, setSkipAnimation] = useState(false);
+  const [skipAnimation, setSkipAnimation] = useState(noAnimation);
+  const [showSkip, setShowSkip] = useState(false);
+
+  const question: QuestionItem = getQuestion(language)[questionIdx];
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (!showSkip) setShowSkip(true);
+    }, 8000);
+  }, [showSkip]);
 
   useEffect(() => {
     if (!visible) {
@@ -59,7 +70,7 @@ export default function StoryComponent({
     <>
       <div className="flex flex-col gap-8">
         <div
-          className={`w-full h-auto rounded-md overflow-hidden relative image-previewer ${
+          className={`w-full h-auto relative rounded-md overflow-hidden image-previewer ${
             visible ? "fadeInLeft" : "fadeOutRight"
           }`}
         >
@@ -96,11 +107,15 @@ export default function StoryComponent({
                 </div>
                 <div ref={skipAnimation ? null : textRef} />
               </div>
-              {skipAnimation && (
+              {(showSkip || skipAnimation) && (
                 <div
                   className="flex justify-end mt-1 text-md dip-animation cursor-pointer font-mono"
                   style={{ animationDuration: "1s" }}
-                  onClick={() => setShowOptions(true)}
+                  onClick={() =>
+                    skipAnimation
+                      ? setShowOptions(true)
+                      : setSkipAnimation(true)
+                  }
                 >
                   {">>>"}
                 </div>

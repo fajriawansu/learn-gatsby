@@ -5,5 +5,5 @@ export interface StoryComponentProps {
   imgUrl: string;
   imgChild?: ReactNode;
   imgClass?: string;
-  question: QuestionItem;
+  questionIdx: number;
 }

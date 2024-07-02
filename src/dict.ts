@@ -185,7 +185,7 @@ const QUESTION_DICT_BANK: Dictionaries = {
   },
   epilogue: {
     id: "Kau masuk ke ruangan baru yang kau pilih,| semuanya berbeda.|| Kau mendengar suara nyaring yang terus berulang,| mulutmu menganga menatap langit-langit,| kau mendapat cahaya sedikit demi sedikit.|| Badanmu hangat,| terutama bagian bawahmu.|| Lama...|| lamaaaa sekali...||| Tapi akhirnya kau semakin sadar,| mendapati kalau suara itu adalah alarm pagimu dan kehangatan itu adalah...|| kau yang mengompol.|| Kau...||| hanya bisa menerima.",
-    en: "You enter the new room you chose,| everything is different.|| You hear a loud voice that keeps repeating,| Your mouth gapes staring at the ceiling,| You get the light little by little. Your body is warm,| especially your lower part.|| Odd...|| It takes a very long time...||| But finally you are more and more aware,| find that the sound is your morning alarm and the warmth is... || you which peed in your pants.|| You...||| can only accept the situation.",
+    en: "You enter the new room you chose,| everything is different.|| You hear a loud voice that keeps repeating,| Your mouth gapes staring at the ceiling,| You get the light little by little. Your body is warm,| especially your lower part.|| Odd...|| It takes a very loooong time...||| But finally you are more and more aware,| find that the sound is your morning alarm and the warmth is... || you; which peed in your pants.|| You...||| can only accept the situation.",
   },
 };
 

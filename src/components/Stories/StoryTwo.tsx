@@ -1,5 +1,4 @@
 import React from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
 
 export default function StoryTwo() {
@@ -28,7 +27,7 @@ export default function StoryTwo() {
           </div>
         </div>
       }
-      question={QUESTIONS_CONST[2]}
+      questionIdx={2}
     />
   );
 }

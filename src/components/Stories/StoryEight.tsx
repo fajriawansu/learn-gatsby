@@ -1,5 +1,4 @@
 import React from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
 
 export default function StoryEight() {
@@ -7,7 +6,7 @@ export default function StoryEight() {
     <StoryComponent
       imgUrl={`story_8.jpg`}
       imgClass="redFilter"
-      question={QUESTIONS_CONST[8]}
+      questionIdx={8}
     />
   );
 }

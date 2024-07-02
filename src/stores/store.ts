@@ -2,6 +2,7 @@ import { create } from "zustand";
 import {
   CharacterPoints,
   CharacterReportEnum,
+  LanguageType,
   LastAnsweredType,
   ObservedEnum,
   ObservedValue,
@@ -10,6 +11,7 @@ import {
 } from "../types/type";
 
 interface BearState {
+  language: LanguageType;
   playerInfo: PlayerInfoType;
   activeStoryIdx: number;
   noAnimation: boolean;
@@ -17,6 +19,7 @@ interface BearState {
   lastAnswer?: LastAnsweredType;
   characterPoints: Record<keyof typeof CharacterReportEnum, number>;
   personalityPoints: PersonalitiesStoreType;
+  setLanguage: (lang: LanguageType) => void;
   updatePoint: (persona: ObservedValue, char: CharacterPoints) => void;
   setActiveStoryIdx: (idx: number) => void;
   updateAnswersLog: (questionNumber: number, value: number) => void;
@@ -54,6 +57,7 @@ function sumCharacters(
 }
 
 export const useGlobalStore = create<BearState>()((set) => ({
+  language: "id",
   playerInfo: { name: "", gender: "boy" },
   activeStoryIdx: 99,
   noAnimation: false,
@@ -88,6 +92,10 @@ export const useGlobalStore = create<BearState>()((set) => ({
     selfishness: 1,
     curiosity: 1,
   },
+  setLanguage: (lang) =>
+    set(() => ({
+      language: lang,
+    })),
   updatePoint: (personas, chars) =>
     set((state) => ({
       characterPoints: sumCharacters(state.characterPoints, chars),

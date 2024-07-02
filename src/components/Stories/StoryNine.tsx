@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
 
 export default function StoryNine() {
@@ -18,7 +17,7 @@ export default function StoryNine() {
     <StoryComponent
       imgUrl={changePic ? `story_9_2.jpg` : `story_9.jpg`}
       imgClass={isShaking ? "shake" : ""}
-      question={QUESTIONS_CONST[9]}
+      questionIdx={9}
       imgChild={
         <div
           ref={divRef}

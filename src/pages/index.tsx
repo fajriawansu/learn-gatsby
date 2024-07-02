@@ -21,6 +21,9 @@ import Register from "../components/Register";
 const IndexPage: React.FC<PageProps> = () => {
   const { activeStoryIdx, answersLog, lastAnswer, playerInfo } =
     useGlobalStore();
+  window.onbeforeunload = function () {
+    return "";
+  };
 
   return (
     <Layout noPadding={activeStoryIdx > 11}>
@@ -46,15 +49,17 @@ const IndexPage: React.FC<PageProps> = () => {
           playerInfo={playerInfo}
         />
       )}
-      <div className="fixed bottom-0 left-0 flex justify-center items-center w-full h-4 pb-4 text-white">
-        developed by:&nbsp;
-        <a
-          href="https://fajriawan.vercel.app/"
-          className="text-yellow-300 underline"
-          target="_blank"
-        >
-          fjrwn
-        </a>
+      <div className="fixed bottom-0 left-0 flex justify-center items-center w-full h-6 text-white bg-opacity-30 bg-black">
+        <div>
+          developed by:&nbsp;
+          <a
+            href="https://fajriawan.vercel.app/"
+            className="text-yellow-300 underline"
+            target="_blank"
+          >
+            fjrwn.
+          </a>
+        </div>
       </div>
     </Layout>
   );

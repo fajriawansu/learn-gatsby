@@ -1,5 +1,4 @@
 import React from "react";
-import { QUESTIONS_CONST } from "../../constants";
 import StoryComponent from "./StoryComponent";
 
 export default function StorySeven() {
@@ -12,7 +11,7 @@ export default function StorySeven() {
           <div className="h-full w-full z-10 bg-darkest absolute left-0 top-0 dip-animation" />
         </>
       }
-      question={QUESTIONS_CONST[7]}
+      questionIdx={7}
     />
   );
 }

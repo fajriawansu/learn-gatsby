@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { splitStringToTypeAnimation } from "../../helpers/splitStringToTypeAnimation";
-import { QUESTIONS_CONST } from "../../constants";
 import { useGlobalStore } from "../../stores/store";
 import removeTextSplitter from "../../helpers/removeTextSplitter";
+import { getQuestion } from "../../constants";
 
 export default function Epilogue() {
-  const { setActiveStoryIdx, noAnimation } = useGlobalStore();
+  const { setActiveStoryIdx, noAnimation, language } = useGlobalStore();
   const [showNext, setShowNext] = useState(noAnimation);
   const [visible, setVisible] = useState(true);
   useEffect(() => {
@@ -35,13 +35,13 @@ export default function Epilogue() {
                 whiteSpace: "pre-line",
               }}
               dangerouslySetInnerHTML={{
-                __html: removeTextSplitter(QUESTIONS_CONST[11].question),
+                __html: removeTextSplitter(getQuestion("id")[11].question),
               }}
             />
           ) : (
             <TypeAnimation
               sequence={splitStringToTypeAnimation({
-                text: QUESTIONS_CONST[11].question,
+                text: getQuestion(language)[11].question,
                 splitter: "|",
                 onFinish: () => setShowNext(true),
               })}
