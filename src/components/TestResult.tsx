@@ -42,7 +42,7 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
 
         // download image
         const link = document.createElement("a");
-        link.download = "result-character.png";
+        link.download = `16coolities-result-${playerInfo.name.toLowerCase()}.png`;
         link.href = dataUrl;
         link.click();
       }
@@ -123,7 +123,12 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
             gender={playerInfo.gender === "boy" ? "girl" : "boy"}
           />
         </div>
-        <div className="w-full mb-20" />
+        {downloading && (
+          <div className="text-center text-sm font-mono text-yellow-300 pt-4">
+            https://16coolities.vercel.app
+          </div>
+        )}
+        <div className="w-full mb-32" />
       </div>
       <div className="absolute bottom-10 right-0 flex flex-col items-center justify-center w-full font-mono">
         <button
@@ -132,7 +137,7 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
         >
           {isEn ? "Download Result" : "Download Hasil"}
         </button>
-        <div className="text-xs mt-1">
+        <div className="text-[8px] mt-1">
           {" "}
           Resource credit:{" "}
           <a

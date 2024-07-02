@@ -10,7 +10,8 @@ export default function StoryTen() {
       answersLog[0] === 0 ? "-48px" : answersLog[0] === 2 ? "+48px" : "";
     return (
       <div
-        className={`flex gap-2 absolute left-[calc(50%${exitPosition})] top-1/2 -translate-x-1/2 -translate-y-1/2 -mt-4 items-center dip-animation`}
+        className={`flex gap-2 absolute top-1/2 -translate-x-1/2 -translate-y-1/2 -mt-4 items-center dip-animation`}
+        style={{ left: `calc(50%${exitPosition})` }}
       >
         <div>Exit</div>
       </div>
