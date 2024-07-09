@@ -7,7 +7,7 @@ interface LayoutI {
 
 export function Layout({ children, noPadding }: LayoutI) {
   return (
-    <div className="w-full flex flex-col items-center justify-center min-h-screen">
+    <div className="w-full flex flex-col items-center justify-center">
       <div
         className={`max-w-[450px] w-full min-h-screen bg-darkest text-white font-mystery text-base ${
           noPadding ? "" : "p-4"
