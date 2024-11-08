@@ -46,6 +46,9 @@ const IndexPage: React.FC<PageProps> = () => {
           playerInfo={playerInfo}
         />
       )}
+      { activeStoryIdx > 0 && activeStoryIdx <=10 && <div className="fixed top-4 left-0 flex justify-center w-full text-xs">
+        {activeStoryIdx}/10
+      </div>}
       <div className="fixed bottom-0 left-0 flex justify-center items-center w-full h-6 text-white bg-opacity-30 bg-black">
         <div>
           developed by:&nbsp;

@@ -27,11 +27,14 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
   const isEn = language === "en";
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     setTimeout(() => {
       setGlitch(!glitch);
     }, Math.floor(Math.random() * 1000));
   }, [glitch]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const domEl = useRef<HTMLDivElement>(null);
 
