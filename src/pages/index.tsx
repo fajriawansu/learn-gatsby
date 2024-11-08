@@ -49,7 +49,7 @@ const IndexPage: React.FC<PageProps> = () => {
       { activeStoryIdx > 0 && activeStoryIdx <=10 && <div className="fixed top-4 left-0 flex justify-center w-full text-xs">
         {activeStoryIdx}/10
       </div>}
-      <div className="fixed bottom-0 left-0 flex justify-center items-center w-full h-6 text-white bg-opacity-30 bg-black">
+      <div className="fixed bottom-0 left-0 flex gap-4 justify-center items-center w-full h-6 text-white bg-opacity-30 bg-black">
         <div>
           developed by:&nbsp;
           <a
@@ -58,6 +58,17 @@ const IndexPage: React.FC<PageProps> = () => {
             target="_blank"
           >
             fjrwn.
+          </a>
+        </div>
+        <div className="h-2 w-0.5 bg-white" />
+        <div>
+          Support&nbsp;
+          <a
+            href="https://trakteer.id/fajriawansu"
+            className="text-yellow-300 underline"
+            target="_blank"
+          >
+            here
           </a>
         </div>
       </div>
