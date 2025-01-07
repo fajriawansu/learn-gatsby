@@ -15,6 +15,12 @@ export default function Register() {
   const handleSubmit = () => {
     setPlayerInfo(value);
     setActiveStoryIdx(0);
+    if (typeof window !== 'undefined') {
+      window.gtag("event", "click", {
+        event_label: value.gender,
+        event_category: "Register Gender"
+      })
+    }
   };
 
   return (
