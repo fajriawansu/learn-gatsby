@@ -40,8 +40,8 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
     if(char){
       if (typeof window !== 'undefined') {
         window.gtag("event", "click", {
-          event_label: DICT[CharacterReportEnum[char]].en.toUpperCase(),
-          event_category: "Register Gender",
+          event_label: playerInfo.name,
+          event_category: DICT[CharacterReportEnum[char]].en.toUpperCase(),
           description: `(${playerInfo.name} & ${playerInfo.gender}) - ${DICT[CharacterReportEnum[char]].en.toUpperCase()}`
         })
       }
