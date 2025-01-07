@@ -12,7 +12,6 @@ import BuddyRIvals from "./BuddyRIvals";
 import * as htmlToImage from "html-to-image";
 import { personalityCalculation } from "../helpers/calculateResult";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 
 interface TestResultProps {
   char: CharacterReportEnum;
@@ -39,11 +38,6 @@ export default function TestResult({ char, playerInfo }: TestResultProps) {
 
   useEffect(() => {
     if(char){
-      trackCustomEvent({
-        category: "Result Page",
-        action: "visit",
-        label: `${playerInfo.name} - ${DICT[CharacterReportEnum[char]].en.toUpperCase()}`,
-      })
     }
   }, [char])
 

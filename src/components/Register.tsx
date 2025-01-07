@@ -4,7 +4,6 @@ import { useGlobalStore } from "../stores/store";
 import { TypeAnimation } from "react-type-animation";
 import { splitStringToTypeAnimation } from "../helpers/splitStringToTypeAnimation";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 
 export default function Register() {
   const { setActiveStoryIdx, setPlayerInfo, language } = useGlobalStore();
@@ -16,11 +15,6 @@ export default function Register() {
   const handleSubmit = () => {
     setPlayerInfo(value);
     setActiveStoryIdx(0);
-    trackCustomEvent({
-      action: "click",
-      category: "Gender Select Start",
-      label: `${value.gender}`
-    })
   };
 
   return (
